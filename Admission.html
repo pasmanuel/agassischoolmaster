@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+    <title>Admission - Agassi Memorial School</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="./Images/logo.ico">
+
+		<style>
+		.p-admissions-guide h1{
+			color:#006a3e;
+			text-shadow:1px 1px 2px #006a3e;
+			text-align:center;
+			margin:o;
+		}
+		
+		.p-admission-steps{
+			padding-bottom:30px;
+		}
+		
+		.is-p-admission-step{
+			background-color:#006a3e;
+			margin:10px;
+			color:whitesmoke;
+			border:4px solid #006a3e;
+			padding:10px;
+			border-radius:10px;
+			width:40%;
+		}
+		
+		.is-p-admission-step h4{
+			color:whitesmoke;
+			text-shadow:1px 1px 2px black;
+		}
+		
+		.is-step-1{	
+			margin-left:7%;
+		}
+		
+		.is-step-2{	
+			margin-left:30%;
+		}
+		
+		.is-step-3{	
+			margin-left:55%;
+		}
+		
+		.admissions-guide{
+			background-image:url('./Images/graduation-9.jpg');
+			background-size:cover;
+		}
+		
+		.admissions-guide h1{
+			color:whitesmoke;
+			text-shadow:1px 1px 2px black;
+			text-align:center;
+			margin:0;
+		}
+		
+		.admission-steps{
+			padding-bottom:30px;
+		}
+		
+		.is-admission-step{
+			background-color:whitesmoke;
+			margin:10px;
+			color:black;
+			border:4px solid #006a3e;
+			padding:10px;
+			border-radius:10px;
+			width:30%;
+		}
+		
+		.is-admission-step h4{
+			color:#006a3e;
+			text-shadow:1px 1px 2px black;
+		}
+		
+		.step-1{	
+			margin-left:3%;
+		}
+		
+		.step-2{	
+			margin-left:15%;
+		}
+		
+		.step-3{	
+			margin-left:35%;
+		}
+		
+		.step-4{	
+			margin-left:45%;
+		}
+		
+		.step-5{	
+			margin-left:55%;
+		}
+		
+		.step-6{	
+			margin-left:65%;
+		}
+		
+		@media (max-width: 786px) {
+			.admission-steps{
+				display:block;
+			}
+			
+			.is-admission-step{
+				width:80%;
+				margin:10px auto;
+			}
+			
+			.step-1,
+			.step-2,
+			.step-3,
+			.step-4,
+			.step-5,
+			.step-6{
+				margin:10px auto;
+			}
+		}
+		
+		@media (max-width: 786px) {
+			.admission-steps{
+				display:block;
+			}
+			
+			.is-admission-step,
+			.is-p-admission-step{
+				width:80%;
+				margin:10px auto;
+			}
+			
+			.is-step-1,
+			.is-step-2,
+			.is-step-3,
+			.step-1,
+			.step-2,
+			.step-3,
+			.step-4,
+			.step-5,
+			.step-6{
+				margin:10px auto;
+			}
+		}
+		
+		.parallax {
+			/* The image used */
+			background-image: url("./Images/agassi-building.jpg");
+
+			/* Set a specific height */
+			min-height: 300px;
+
+			/* Create the parallax scrolling effect */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+			/* Centering content */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			color: white;
+			text-align: center;
+		}
+
+		.info {
+			background: rgba(0, 0, 0, 0.5); /* Optional: To make text more readable */
+			padding: 20px;
+			//border-radius: 10px;
+			color:whitesmoke;
+			font-size:30px;
+			width:50%;
+		}
+		
+		.info a{
+			text-decoration:none;
+			color:whitesmoke;
+			padding:5px;
+			margin-block:5px;	
+		}
+		
+		.info a div{
+			border:3px solid white;
+		}
+		
+		.info a:hover{
+			background-color:whitesmoke;
+			color: goldenrod;
+		}
+
+		/* whatsapp icon */
+		@keyframes fadeIn {
+				from{
+					opacity: 0;
+					transform:
+					translateY(20px);
+				}
+				to{
+					opacity: 1;
+					transform: translate(0);
+				}
+				}
+			@keyframes heartbeat {
+				0%, 100{
+					transform:scale(1);
+				}
+				50%{
+					transform:scale(1.1);
+
+				}
+			}
+			.whatsapp-icon{
+				position: fixed;
+				bottom: 50px;
+				right:20px;
+				width: 60px;
+				height: 60px;
+				z-index:1000;
+				animation: fadeIn 1s ease-in-out, heartbeat 2s infinite;
+
+			}
+			.whataspp-icon a{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.whataspp-icon img {
+				width:100%;
+				height:100%;
+				border-radius:50%;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+				transition: transform 0.3s;
+			}
+			.whataspp-icon img:hover{
+				transform: scale(1.1);
+			}
+	
+				@media(max-width:786px){
+					.whataspp-icon{
+						bottom: 80px;
+					}
+				}
+				
+				@media (max-width:400px){
+					.whataspp-icon{
+						display: none;
+					}
+				}
+		
+	</style>
+</head>
+<body>
+    <header class="scroll">
+        <div class="top-bar-container">
+        <div class="container"></div>
+        <div class="animate-text">
+            <div class="rolling-text">Agassi Light to Mankind</div>
+            <div class="rolling-text">100% in BECE Result</div>
+            <div class="rolling-text">Professional and dedicated teachers</div>
+            <div class="rolling-text">Winner of 2023/24 cadet School in Ejisu-Juaben Muncipal </div>
+        </div>
+        <div class="container"></div>
+		</div>
+		    <section class=" sticky-sidebar">
+			<nav class="navbar navbar-expand-lg bg-white box-shadow w-100">
+				<div class="container">
+					<img src="./Images/LOGO.png" alt="Logo" class="logo"> 
+					<a class="navbar-br text-dark text-decoration-none " href="index.html">AGASSI MEMORIAL SCHOOL</a>
+					<!-- Toggle btn -->
+					<button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon "></span>
+					</button>
+
+					<!-- SIDE BAR -->
+					<div class="sidebar offcanvas bg-success offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+						<!-- sidebar header -->
+						<div class="offcanvas-header text-dark border-bottom">
+							<h5 class="offcanvas-title " id="offcanvasDarkNavbarLabel">AGASSI MEMORIAL SCHOOL</h5>
+							<button type="button" class="btn-close btn-close-dark shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						</div>
+						<!-- side bar -->
+						<div class="offcanvas-body">
+							<ul class="navbar-nav justify-content-end fs-5 flex-grow-1 pe-3">
+								<li class="nav-item">
+									<a class="nav-link active text-dark" aria-current="page" href="index.html">Home</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle  text-dark" href="about-us.html">About Us</a>
+									<ul class="dropdown-menu  bg-success dropdown-menu-dark">
+										<li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
+										<li><a class="dropdown-item" href="our-facilities.html">Our Facilities</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle text-dark" href="academics.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Academics
+									</a>
+									<ul class="dropdown-menu  bg-success dropdown-menu-dark">
+										<li><a class="dropdown-item" href="preschool.html">PreSchool</a></li>
+										<li><a class="dropdown-item" href="primary.html">Primary</a></li>
+										<li><a class="dropdown-item" href="jhs.html">JHS</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle text-dark " href="Admission.html" id="navbarDropdown2" role="button"  aria-expanded="false">
+										Admissions
+									</a>
+									<ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown2">
+										<li>
+											<a class="dropdown-item"  href="Admission.html">Admission Process</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="fees-policy.html">Fees Policy</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="apply-now.html">Apply Now</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle active text-dark" href="gallery.html" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Media
+									</a>
+									<ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown3">
+										<li>
+											<a class="dropdown-item " href="gallery.html">Video Gallery</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="gallery.html">Photo Gallery</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item me-6 ">
+									<a class="nav-link text-dark" href="contacts.html">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</section>
+		<!-- to carousel-->
+		<section>
+			<section class="carousel-scroll">
+				<div id="carouselExampleInterval" class="carousel slide"  data-bs-ride="carousel">
+					
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+						  <img src="./Images/quiz-award-4.JPG " loading="lazy" class="d-block w-100" alt="...">
+						  <div class="carousel-caption">
+							<h2>Admissions Guide</h2>
+							<!-- <p>Some  placeholder content for the first slide.</p> -->
+						  </div>
+						</div>
+					  </div>
+					 
+					</div>
+				  </section>
+			</section>
+    </header>
+    <hr>
+	<!--
+    <section class="admin-top">
+        <div class="admin-inf">
+            <h1>The Process Of How Agassi Memorial School Admission Forms Are Done</h1>
+            <p>
+                Getting your child admitted at Agassi Memorial School
+            </p>
+        </div>
+        <div>
+            <h1>
+                Kindergarten 2 - Grade 3
+            </h1>
+        </div>
+        <div class="admin-inf">
+            <p>English Language</p>
+            <p>Mathematics</p>
+        </div>
+        <div>
+            <h1>
+                Grade 4 - JHS 1
+            </h1>
+        </div>
+        <div class="admin-inf">
+            <p>Science</p>
+            <p>English Language</p>
+            <p>Mathematics</p>
+        </div>
+        <div class="admin-inf">
+            <p>When the papers are marked and the child is successful, parents can now pick up the admission form for the child.</p>
+            <p>The pupil will be given a class only when the following documents are returned to the school:</p><br>
+        </div>
+        <div class="admin-inf">
+            <p>*Completed admission form</p>
+            <p>*Required Medical Report from a practitioner</p>
+            <p>*Laboratory tests result</p>
+            <p>"Immediate past report card from former school"</p>
+            <p>*Copy of the pupil's birth certificate or passport</p>
+            <p>*One passport sized photograph</p>
+        </div><br>
+        <div class="admin-inf">
+            <p>The Admission Fee will become due to upon completion of the admission procedure.</p>
+            <p>This is a one-time, non-refundable payment to be made on or before the due date for the payment as stipulated on the invoice</p>
+        </div>
+        <div class="admin-inf">
+            <p>For further inquiries on the admission Contact: 0244657864</p>
+        </div><br>
+    </section>-->
+	
+	
+	<section class="p-admissions-guide">
+		<h1>PRESCHOOL</h1>
+		<div class="p-admission-steps">
+			<div class="is-p-admission-step is-step-1" data-aos="fade-up">
+				<h4>Step 1: Contact the Headteacher</h4>
+				<p>
+					A prospective applicant/parent who intends to enroll his/her ward into our Pre-School must contact the Headteacher by visiting the School.
+				</p>
+			</div>
+			
+			<div class="is-p-admission-step is-step-2" data-aos="fade-up">
+				<h4>Step 2: Submission of Documents</h4>
+				<p>
+					The applicant/parent must come along with the birth certificate of the child or any document that validly proves the name and age of the child to conclude the admission process.
+				</p>
+			</div>
+			
+			<div class="is-p-admission-step is-step-3" data-aos="fade-up">
+				<h4> Step 3: Payment of Fees</h4>
+				<p>
+					The parent/guardian is required to pay the full fees for the chosen class. <strong>Note that this payment does not cover school uniforms, books, and transport fare.</strong>
+				</p>
+			</div>
+			
+		</div>
+	</section>
+	
+	
+	<div class="whatsapp-icon">
+		<a href="https://wa.me/+233244270815" target="_blank">
+			<img src="./Images/icons8-whatsapp-48.png" title="Contact us"  alt="whatsapp">
+		</a>
+	
+	</div>
+	<section class="admissions-guide">
+		<div style="background-color:rgba(0, 106, 62, 0.8);">
+			<h1>PRIMARY-JHS</h1>
+			<div class="admission-steps">
+				<div class="is-admission-step step-1" data-aos="fade-down">
+					<h4>Step 1: Contact the Headteacher</h4>
+					<p>
+						The prospective applicant or parent should visit Agassi Memorial School to contact the Headteacher.
+					</p>
+				</div>
+				
+				<div class="is-admission-step step-2" data-aos="fade-down">
+					<h4>Step 2: Entrance Examination</h4>
+					<p>
+						The child intending to enroll in classes from Basic One (BS 1) to Junior High School 2 (JHS 2) must write an entrance examination.
+					</p>
+				</div>
+				
+				<div class="is-admission-step step-3" data-aos="fade-down">
+					<h4> Step 3: Provide Previous School Enrollment Proof</h4>
+					<p>
+						Alongside the entrance examination, the parent/guardian needs to show proof of enrollment and class from the child's previous school.
+					</p>
+				</div>
+				
+				<div class="is-admission-step step-4" data-aos="fade-down">
+					<h4>Step 4: Initial Screening</h4>
+					<p>
+						 After the entrance examination, if the child passes the initial screening process successfully, the parent/guardian proceeds to the next step.
+					</p>
+				</div>
+				
+				<div class="is-admission-step step-5" data-aos="fade-down">
+					<h4>Step 5: Payment of Fees</h4>
+					<p>
+						Upon successful screening, the parent/guardian is required to pay the full fees for the chosen class. <strong>Note that this payment does not cover school uniforms, books, and transport fare.</strong>
+					</p>
+				</div>
+				
+				<div class="is-admission-step step-6" data-aos="fade-down">
+					<h4>Note: Rare Admission into JHS 3</h4>
+					<p>
+						It's important to note that Agassi Memorial School rarely admits children into Junior High School 3.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+		<style>
+		
+	</style>
+	<section class="to-next-page" >
+		<div class="parallax">
+			<div class="info">
+				<h2>Want to know more?</h2>
+				<a href="fees-policy.html">
+					<div>Visit Fees Policy</div>
+				</a>
+			</div>
+		</div>
+	</section>
+    	<footer class="footer">
+		<div class="footer-container">
+			<div class="footer-column">
+			<img src="./Images/LOGO.png" alt="Logo" class="footer-logo">
+			<li><a href="mailto:agassimemorialschool@gmail.com">agassimemorialschool@gmail.com</a></li>
+
+		</div>
+		<div class="footer-column">
+			<h3 class="footer-heading">Our Academics</h3>
+			<ul class="footer-links">
+			  <li><a href="preschool.html">Preschool</a></li>
+			  <li><a href="primary.html">Primary School</a></li>
+			  <li><a href="jhs.html">Junior High School</a></li>
+			  <li><a href="smartribe.html">Smart Tribe</a></li>
+			</ul>
+		</div>
+		<div class="footer-column">
+			<h3 class="footer-heading">Admissions</h3>
+			<ul class="footer-links">
+			  <li><a href="Admission.html">Admissions</a></li>
+			  <li><a href="contacts.html">Contact Us</a></li>
+			</ul>
+		</div>
+		<div class="footer-column">
+			<h3 class="footer-heading">Social Media</h3>
+			<ul class="footer-social">
+				<li><a href="https://www.bing.com/ck/a?!&&p=7d14c313e1758b5fJmltdHM9MTcyMjI5NzYwMCZpZ3VpZD0zMzZhZmNiZC1kNGMwLTZhYWItMGM0Ni1lODBkZDUxODZiYTMmaW5zaWQ9NTE4Nw&ptn=3&ver=2&hsh=3&fclid=336afcbd-d4c0-6aab-0c46-e80dd5186ba3&psq=agassi-memorial+school&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Blb3BsZS9BZ2Fzc2ktTWVtb3JpYWwtU2Nob29sLUVqaXN1LzEwMDA2MzgwMTA0MzMyMS8&ntb=1"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+				<li><a href="https://www.bing.com/ck/a?!&&p=de726fb9974abab3JmltdHM9MTcyMjI5NzYwMCZpZ3VpZD0zMzZhZmNiZC1kNGMwLTZhYWItMGM0Ni1lODBkZDUxODZiYTMmaW5zaWQ9NTIxMQ&ptn=3&ver=2&hsh=3&fclid=336afcbd-d4c0-6aab-0c46-e80dd5186ba3&psq=agassi-memorial+school&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9hZ2Fzc2lfbWVtb3JpYWxfc2Nob29sLw&ntb=1"><i class="fab fa-instagram"></i> Instagram</a></li>
+				<li><a href="https://www.tiktok.com/@agassi.memorial.s"><i class="fab fa-twitter"></i>Tiktok</a></li>
+			</ul>
+		</div>
+	</footer>
+		<p class="copy-right">
+			© 2024 Website Developed by Agassi Students. Empowered by <a href="https://thesmartribe.com">thesmartribe.com</a>.
+		</p> 
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+		  AOS.init();
+		</script>
+</body>
+</html>
