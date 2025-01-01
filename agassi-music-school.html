@@ -20,6 +20,76 @@
             box-sizing: border-box;
         }
 
+        /* whatsapp icon */
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform:
+					translateY(20px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translate(0);
+			}
+		}
+
+		@keyframes heartbeat {
+
+			0%,
+			100% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.1);
+
+			}
+		}
+
+		.whatsapp-icon {
+			position: fixed;
+			bottom: 50px;
+			right: 20px;
+			width: 60px;
+			height: 60px;
+			z-index: 1000;
+			animation: fadeIn 1s ease-in-out, heartbeat 2s infinite;
+
+		}
+
+		.whataspp-icon a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		.whataspp-icon img {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+			transition: transform 0.3s;
+		}
+
+		.whataspp-icon img:hover {
+			transform: scale(1.1);
+		}
+
+		@media(max-width:786px) {
+			.whataspp-icon {
+				bottom: 80px;
+				z-index: 1000;
+				right: 100px;
+			}
+		}
+
+		@media (max-width:400px) {
+			.whataspp-icon {
+				display: none;
+			}
+		}
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -349,17 +419,17 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="lastname">Last Name:</label>
-                            <input type="text" id="lastname" name="lastname">
+                            <input type="text" id="lastname" required name="lastname">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="sub-form-group">
                             <label for="dob">Date of Birth:</label>
-                            <input type="date" id="dob" name="dob">
+                            <input type="date" id="dob"  required name="dob">
                         </div>
                         <div class="sub-form-group">
                             <label for="pob">Place of Birth:</label>
-                            <input type="text" id="pob" name="pob">
+                            <input type="text" id="pob"  required name="pob">
                         </div>
                         <div class="sub-form-group">
                             <label for="gender">Gender:</label>
@@ -377,21 +447,21 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="address">Residential Address:</label>
-                            <input id="address" name="address" rows="3">
+                            <input id="address" name="address"  required rows="3">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="sub-form-group">
                             <label for="telephone">Telephone Number :</label>
-                            <input type="number" id="telephone" name="telephone" rows="3">
+                            <input type="number" id="telephone"  required name="telephone" rows="3">
                         </div>
                         <div class="sub-form-group">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" rows="3">
+                            <input type="email" id="email" required name="email" rows="3">
                         </div>
                         <div class="sub-form-group">
                             <label for="ghanacard">Ghana Card Number:</label>
-                            <input type="text" id="ghanacard" name="ghanacard">
+                            <input type="text" id="ghanacard"  required name="ghanacard">
                         </div>
                     </div>
                     <div class="form-navigation">
@@ -422,10 +492,7 @@
                             <input type="text" id="schoolLevel" name="schoolLevel">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="documents">Upload Supporting Documents:</label>
-                        <input type="file" id="documents" name="documents[]" multiple>
-                    </div>
+                   
                     <div class="form-navigation">
                         <button class="secondary" type="button" onclick="prevSection()">Back</button>
                         <button class="primary" type="button" onclick="nextSection()">Next</button>
@@ -433,26 +500,95 @@
                 </div>
                 
                  <!-- Section 3: AICAP COURSES -->
-                 <div id="section3" class="form-section">
+                <div id="section3" class="form-section">
                     <h2>AICAP COURSES - What do you want Study?</h2>
                     <div class="form-group">
                         <div class="sub-form-group multiselect">
-                                <div class="select-box" tabindex="0">Select Core Courses</div>
-                                <div class="options-container">
-                                    <label class="option"><input type="checkbox" value="music-theory"> Music Theory</label>
-                                    <label class="option"><input type="checkbox" value="piano-keyboard"> Piano/Keyboard</label>
-                                    <label class="option"><input type="checkbox" value="atentenben"> Atentenben</label>
-                                    <label class="option"><input type="checkbox" value="african-dance"> African Dance</label>
-                                </div>
+                            <div class="select-box" tabindex="0" data-placeholder="Select Core Courses" required>Select Core Courses</div>
+                            <div class="options-container">
+                                <label class="option">
+                                    <input type="checkbox" value="music-theory">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Music Theory
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" value="piano-keyboard">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Piano/Keyboard
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" value="atentenben">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Atentenben
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" value="african-dance">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    African Dance
+                                </label>
+                            </div>
                         </div>
-
                     </div>
-                   
+                    <br><br>
+                    <div class="form-group">
+                        <div class="sub-form-group multiselect">
+                            <div class="select-box" tabindex="0" data-placeholder="Select Elective Courses" required>Select Elective Courses</div>
+                            <div class="options-container">
+                                <label class="option">
+                                    <input type="checkbox" value="guitar">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Guitar
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" value="violin">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Violin
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" value="cello">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Cello
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" value="trumpet">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Trumpet
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" value="clarinet">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Clarinet
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" value="saxophone">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Saxophone
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox" value="vocal-training">
+                                    <i class="fa fa-check unchecked"></i>
+                                    <i class="fa fa-check-circle checked"></i>
+                                    Vocal Training
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-navigation">
                         <button class="secondary" type="button" onclick="prevSection()">Back</button>
                         <button class="primary" type="button" onclick="nextSection()">Next</button>
                     </div>
                 </div>
+               
             
 
                 <!-- Section 4: Family Data -->
@@ -479,7 +615,7 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="fphone">Father's Telephone:</label>
-                            <input type="text" id="fphone" name="fphone">
+                            <input type="text" id="fphone"  required name="fphone">
                         </div>
                         <div class="sub-form-group">
                             <label for="fmail">Father's Email:</label>
@@ -508,7 +644,7 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="mphone">Mother's Telephone:</label>
-                            <input type="text" id="mphone" name="mphone">
+                            <input type="text" id="mphone"  required name="mphone">
                         </div>
                         <div class="sub-form-group">
                             <label for="mmail">Mother's Email:</label>
@@ -537,7 +673,7 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="gphone">Guardian's Telephone:</label>
-                            <input type="text" id="gphone" name="gphone">
+                            <input type="text" id="gphone"  required name="gphone">
                         </div>
                         <div class="sub-form-group">
                             <label for="gmail">Guardian's Email:</label>
@@ -556,29 +692,29 @@
                     <div class="form-group">
                         <div class="sub-form-group">
                             <label for="econtact">Emergency Contact Name 1:</label>
-                            <input type="text" id="econtact" name="econtact">
+                            <input type="text" id="econtact"  required name="econtact">
                         </div>
                         <div class="sub-form-group">
                             <label for="ephone">Contact Number:</label>
-                            <input type="text" id="ephone" name="ephone">
+                            <input type="text" id="ephone"  required name="ephone">
                         </div>
                         <div class="sub-form-group">
                             <label for="erelationship">Relationship:</label>
-                            <input type="text" id="erelationship" name="erelationship">
+                            <input type="text" id="erelationship"  required name="erelationship">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="sub-form-group">
                             <label for="secontact">Emergency Contact Name 2:</label>
-                            <input type="text" id="secontact" name="secontact">
+                            <input type="text" id="secontact"  required name="secontact">
                         </div>
                         <div class="sub-form-group">
                             <label for="sephone">Contact Number:</label>
-                            <input type="text" id="sephone" name="sephone">
+                            <input type="text" id="sephone"  required name="sephone">
                         </div>
                         <div class="sub-form-group">
                             <label for="serelationship">Relationship:</label>
-                            <input type="text" id="serelationship" name="serelationship">
+                            <input type="text" id="serelationship"  required name="serelationship">
                         </div>
                     </div>
                     <div class="form-navigation">
@@ -632,8 +768,15 @@
                 </div>
             </form> 
        </div> 
-       
     </div>
+    <div class="whatsapp-icon">
+		<a href="https://wa.me/+233244270815" target="_blank">
+			<img src="./Images/icons8-whatsapp-48.png" title="Contact Us" alt="whatsapp">
+		</a>
+
+	</div>
+   
+    
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -677,21 +820,24 @@
             href="https://thesmartribe.com">thesmartribe.com</a>.
     </p>
 
-   <script src="./script/formscripts.js"></script>
+   <script src="./script/formscripts.j"></script>
    <script>
-    // Multiselect Dropdown Functionality
-    const selectBox = document.querySelector('.select-box');
-    const optionsContainer = document.querySelector('.options-container');
+       
+     // Multiselect Dropdown Functionality
+document.querySelectorAll('.select-box').forEach(selectBox => {
+    const optionsContainer = selectBox.nextElementSibling;
 
     // Toggle the dropdown visibility
     selectBox.addEventListener('click', () => {
         optionsContainer.classList.toggle('show');
+        selectBox.classList.toggle('active'); // Add active class for arrow rotation
     });
 
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!selectBox.contains(e.target) && !optionsContainer.contains(e.target)) {
             optionsContainer.classList.remove('show');
+            selectBox.classList.remove('active'); // Remove active class for arrow rotation
         }
     });
 
@@ -699,76 +845,315 @@
     selectBox.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' || e.key === 'Tab') {
             optionsContainer.classList.remove('show');
+            selectBox.classList.remove('active'); // Remove active class for arrow rotation
         }
     });
-</script>
+
+    // Update the select box text when an option is selected
+    optionsContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            const selectedOptions = Array.from(optionsContainer.querySelectorAll('input[type="checkbox"]:checked'))
+                .map(checkbox => checkbox.parentElement.textContent.trim())
+                .join(', ');
+
+            // Update the select box text
+            selectBox.textContent = selectedOptions || selectBox.getAttribute('data-placeholder');
+        });
+    });
+});
+
+// Form Navigation and Validation
+let currentSection = 1;
+
+function validateCurrentSection() {
+    const currentFormSection = document.querySelector('.form-section.active');
+    const requiredFields = currentFormSection.querySelectorAll('[required]');
+    let isValid = true;
+
+    // Clear all existing error messages
+    currentFormSection.querySelectorAll('.error-message').forEach(error => error.remove());
+
+    requiredFields.forEach((field) => {
+        field.classList.remove('error');
+
+        // Handle standard input fields
+        if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.classList.add('error');
+
+                const error = document.createElement('span');
+                error.className = 'error-message';
+                error.textContent = 'This field is required';
+                field.parentNode.appendChild(error);
+            }
+        }
+
+        // Handle custom multiselect dropdowns
+        if (field.classList.contains('select-box')) {
+            const optionsContainer = field.nextElementSibling;
+            const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
+
+            if (checkedOptions.length === 0) {
+                isValid = false;
+                field.classList.add('error');
+
+                const error = document.createElement('span');
+                error.className = 'error-message';
+                error.textContent = 'Please select at least one option';
+                field.parentNode.appendChild(error);
+            }
+        }
+    });
+
+    return isValid;
+}
+
+function nextSection() {
+    // Only validate if we're not on the last section
+    if (currentSection < document.querySelectorAll('.form-section').length && !validateCurrentSection()) {
+        return; // Prevent navigating to the next section if validation fails
+    }
+
+    const totalSections = document.querySelectorAll('.form-section').length;
+    if (currentSection < totalSections) {
+        currentSection++;
+        updateNavigation();
+        navigateTo(currentSection);
+    }
+}
+
+function prevSection() {
+    // No validation on the "Back" button; simply move to the previous section
+    if (currentSection > 1) {
+        currentSection--;
+        updateNavigation();
+        navigateTo(currentSection);
+    }
+}
+
+function navigateTo(sectionNumber) {
+    const sections = document.querySelectorAll('.form-section');
+    const navLinks = document.querySelectorAll('.side-nav a');
+
+    // Remove the 'active' class from all sections and nav links
+    sections.forEach((section) => section.classList.remove('active'));
+    navLinks.forEach((link) => link.classList.remove('highlight'));
+
+    // Add the 'active' class to the current section
+    const selectedSection = document.getElementById('section' + sectionNumber);
+    if (selectedSection) {
+        selectedSection.classList.add('active');
+    }
+
+    // Highlight the corresponding nav link
+    if (navLinks[sectionNumber - 1]) {
+        navLinks[sectionNumber - 1].classList.add('highlight');
+    }
+}
+
+function updateNavigation() {
+    const prevButton = document.querySelector('.form-navigation .secondary');
+    const nextButton = document.querySelector('.form-navigation .primary');
+
+    const totalSections = document.querySelectorAll('.form-section').length;
+
+    prevButton.disabled = currentSection === 1;
+    nextButton.textContent = currentSection === totalSections ? 'Submit' : 'Next';
+}
+
+function validateAllSections() {
+    const sections = document.querySelectorAll('.form-section');
+    let allValid = true;
+
+    sections.forEach((section) => {
+        const requiredFields = section.querySelectorAll('[required]');
+        requiredFields.forEach((field) => {
+            // Handle standard input fields
+            if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
+                if (!field.value.trim()) {
+                    allValid = false;
+                    field.classList.add('error');
+
+                    const error = document.createElement('span');
+                    error.className = 'error-message';
+                    error.textContent = 'This field is required';
+                    field.parentNode.appendChild(error);
+                }
+            }
+
+            // Handle custom multiselect dropdowns
+            if (field.classList.contains('select-box')) {
+                const optionsContainer = field.nextElementSibling;
+                const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
+
+                if (checkedOptions.length === 0) {
+                    allValid = false;
+                    field.classList.add('error');
+
+                    const error = document.createElement('span');
+                    error.className = 'error-message';
+                    error.textContent = 'Please select at least one option';
+                    field.parentNode.appendChild(error);
+                }
+            }
+        });
+    });
+
+    return allValid;
+}
+
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Validate all sections
+    if (!validateAllSections()) {
+        alert("Please fill in all required fields before submitting.");
+        return;
+    }
+
+    // Get the form element
+    const form = document.getElementById('admission-form');
+
+    // Create a FormData object from the form
+    const formData = new FormData(form);
+
+    // Send the form data to Formspree using fetch
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Form submitted successfully!");
+            form.reset(); // Optionally reset the form after submission
+        } else {
+            response.json().then(data => {
+                alert(`Error: ${data.error}`); // Show the error message from Formspree
+            });
+        }
+    })
+    .catch(error => {
+        alert("There was an error submitting the form. Please try again.");
+        console.error(error);
+    });
+}
+
+
+     
+
+
+
+
+
+    </script>
 
 
 <style>
-/* .container {
-    max-width: 600px;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-} */
-h1 {
-    text-align: center;
-    color: #333;
-}
-.multiselect {
-    position: relative;
-    display: inline-block;
-    width: 60%;
-}
-.multiselect .select-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+    /* Dropdown Container */
+.select-box {
     padding: 10px;
-    background-color: #ffffff;
+    border: 1px solid #ccc;
     cursor: pointer;
+    background-color: #f9f9f9;
+    position: relative;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
-.multiselect .select-box:focus {
-    outline: none;
-    border-color: #007bff;
-}
-.multiselect .options-container {
-    display: none;
+
+/* Dropdown Arrow */
+.select-box::after {
+    content: '▼';
     position: absolute;
-    background: #ffffff;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Options Container */
+.options-container {
+    max-height: 0;
+    overflow: hidden;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     margin-top: 5px;
-    max-height: 200px;
-    overflow-y: auto;
-    width: 100%;
-    z-index: 10;
+    padding: 0 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
-.multiselect .options-container.show {
-    display: block;
-}
-.multiselect .options-container .option {
+
+/* Show Dropdown Options */
+.options-container.show {
+    max-height: 200px; /* Adjust based on content height */
     padding: 10px;
-    border-bottom: 1px solid #eee;
-}
-.multiselect .options-container .option:last-child {
-    border-bottom: none;
-}
-.multiselect .options-container .option:hover {
-    background-color: #f4f4f4;
-}
-.multiselect .options-container .option input {
-    margin-right: 10px;
 }
 
+/* Dropdown Options */
+.option {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
 
+/* Hide Default Checkbox */
+.option input {
+    display: none;
+}
+
+/* Unchecked Icon */
+.option .unchecked {
+    display: inline-block;
+    color: #ccc;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+/* Checked Icon */
+.option .checked {
+    display: none;
+    color: #007bff;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+/* Show Checked Icon When Checkbox is Checked */
+.option input:checked ~ .unchecked {
+    display: none;
+}
+
+.option input:checked ~ .checked {
+    display: inline-block;
+}
+
+/* Hover Effects */
+.select-box:hover {
+     background-color: #00693e;
+     color: white;
+
+}
+
+.option:hover {
+    background-color: #00693e;
+    color: white;
+}
+
+/* Rotate Arrow When Dropdown is Open */
+.select-box.active::after {
+    transform: translateY(-50%) rotate(180deg);
+}
 </style>
 
 </body>
-
 </html>

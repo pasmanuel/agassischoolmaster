@@ -20,6 +20,76 @@
             box-sizing: border-box;
         }
 
+        /* whatsapp icon */
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform:
+					translateY(20px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translate(0);
+			}
+		}
+
+		@keyframes heartbeat {
+
+			0%,
+			100% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.1);
+
+			}
+		}
+
+		.whatsapp-icon {
+			position: fixed;
+			bottom: 50px;
+			right: 20px;
+			width: 60px;
+			height: 60px;
+			z-index: 1000;
+			animation: fadeIn 1s ease-in-out, heartbeat 2s infinite;
+
+		}
+
+		.whataspp-icon a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		.whataspp-icon img {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+			transition: transform 0.3s;
+		}
+
+		.whataspp-icon img:hover {
+			transform: scale(1.1);
+		}
+
+		@media(max-width:786px) {
+			.whataspp-icon {
+				bottom: 80px;
+				z-index: 1000;
+				right: 100px;
+			}
+		}
+
+		@media (max-width:400px) {
+			.whataspp-icon {
+				display: none;
+			}
+		}
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -353,7 +423,8 @@
         </nav>
         
         <div class="form-content">
-            <form id="admission-form" action="https://formspree.io/f/xnnndqal" method="POST">
+            <form id="admission-form"  action="https://formspree.io/f/myzzbyor"
+            method="POST">
                 <!-- Section 1: Applicant's Personal Data -->
                 <div id="section1" class="form-section active">
                     <h2>Applicant’s Personal Data</h2>
@@ -631,6 +702,12 @@
 
 
     <!-- To Footer -->
+    <div class="whatsapp-icon">
+		<a href="https://wa.me/+233244270815" target="_blank">
+			<img src="./Images/icons8-whatsapp-48.png" title="Contact Us" alt="whatsapp">
+		</a>
+
+	</div>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
