@@ -231,6 +231,21 @@
 }
 
 
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 
 
         @media (max-width: 768px) {
@@ -300,95 +315,102 @@
 </head>
 
 <body>
-    <header class="scroll">
-        <div class="top-bar-container">
-            <div class="container"></div>
-            <div class="animate-text">
-                <div class="rolling-text">Agassi Light to Mankind</div>
-                <div class="rolling-text">100% in BECE Result</div>
-                <div class="rolling-text">Professional and dedicated teachers</div>
-                <div class="rolling-text">Winner of 2023/24 cadet School in Ejisu-Juaben Muncipal </div>
-            </div>
-            <div class="container"></div>
-        </div>
-        <section class=" sticky-sidebar">
-            <nav class="navbar navbar-expand-lg bg-white box-shadow w-100">
-                <div class="container">
-                    <img src="./Images/LOGO.png" alt="Logo" class="logo"> <a
-                        class="navbar-br text-dark text-decoration-none " href="index.html">AGASSI MEMORIAL SCHOOL</a>
-                    <!-- Toggle btn -->
-                    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon "></span>
-                    </button>
+    <div class="top-bar-container">
+		<div class="container"></div>
+		<div class="animate-text">
+			<div class="rolling-text">Agassi Light to Mankind</div>
+			<div class="rolling-text">100% in BECE Result</div>
+			<div class="rolling-text">Professional and dedicated teachers</div>
+			<div class="rolling-text">Winner of 2023/24 cadet School in Ejisu-Juaben Muncipal </div>
+		</div>
+		<div class="container"></div>
+	</div>
+	<!-- navbar -->
+	<section class=" sticky-sidebar">
+		<nav class="navbar navbar-expand-lg bg-white box-shadow w-100">
+			<div class="container">
+				<img src="./Images/LOGO.png" alt="Logo" class="logo">
+				<a class="navbar-br text-dark text-decoration-none " href="index.html">AGASSI MEMORIAL SCHOOL</a>
+				<!-- Toggle btn -->
+				<button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon "></span>
+				</button>
 
-                    <!-- SIDE BAR -->
-                    <div class="sidebar offcanvas bg-success offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar"
-                        aria-labelledby="offcanvasDarkNavbarLabel">
-                        <!-- sidebar header -->
-                        <div class="offcanvas-header text-dark border-bottom">
-                            <h5 class="offcanvas-title " id="offcanvasDarkNavbarLabel">AGASSI MEMORIAL SCHOOL</h5>
-                            <button type="button" class="btn-close btn-close-dark shadow-none"
-                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <!-- side bar -->
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end fs-5 flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active text-dark" aria-current="page" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle  text-dark" href="about-us.html">About Us</a>
-                                    <ul class="dropdown-menu  bg-success dropdown-menu-dark">
-                                        <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
-                                        <li><a class="dropdown-item" href="our-facilities.html">Our Facilities</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-dark" href="academics.html" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Academics
-                                    </a>
-                                    <ul class="dropdown-menu  bg-success dropdown-menu-dark">
-                                        <li><a class="dropdown-item" href="preschool.html">PreSchool</a></li>
-                                        <li><a class="dropdown-item" href="primary.html">Primary</a></li>
-                                        <li><a class="dropdown-item" href="jhs.html">JHS</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-dark " href="admission.html"
-                                        id="navbarDropdown2" role="button" aria-expanded="false">
-                                        Admissions
-                                    </a>
-                                    <ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown2">
-                                        <li><a class="dropdown-item" href="Admission.html">Admission Process</a></li>
-                                        <li><a class="dropdown-item" href="#">Fees Policy</a></li>
-                                        <li>
-                                            <a class="dropdown-item" href="apply-now.html">Apply Now</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle active text-dark" href="gallery.html"
-                                        id="navbarDropdown3" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Media
-                                    </a>
-                                    <ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown3">
-                                        <li><a class="dropdown-item " href="gallery.html">Video Gallery</a></li>
-                                        <li><a class="dropdown-item" href="gallery.html">Photo Gallery</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item me-6 ">
-                                    <a class="nav-link text-dark" href="contacts.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </section>
+				<!-- SIDE BAR -->
+				<div class="sidebar offcanvas bg-success offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar"
+					aria-labelledby="offcanvasDarkNavbarLabel">
+					<!-- sidebar header -->
+					<div class="offcanvas-header text-white border-bottom">
+						<h5 class="offcanvas-title " id="offcanvasDarkNavbarLabel">AGASSI MEMORIAL SCHOOL</h5>
+						<button type="button" class="btn-close btn-close-dark shadow-none" data-bs-dismiss="offcanvas"
+							aria-label="Close"></button>
+					</div>
+					<!-- side bar -->
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-end fs-5 flex-grow-1 pe-3">
+							<li class="nav-item">
+								<a class="nav-link active text-dark" aria-current="page" href="index.html">Home</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle  text-dark" href="about-us.html">About Us</a>
+								<ul class="dropdown-menu  bg-success dropdown-menu-dark">
+									<li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
+									<li><a class="dropdown-item" href="our-facilities.html">Our Facilities</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-dark" href="academics.html" role="button"
+									data-bs-toggle="dropdown" aria-expanded="false">
+									Academics
+								</a>
+								<ul class="dropdown-menu  bg-success dropdown-menu-dark">
+									<li><a class="dropdown-item" href="preschool.html">PreSchool</a></li>
+									<li><a class="dropdown-item" href="primary.html">Primary</a></li>
+									<li><a class="dropdown-item" href="jhs.html">JHS</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-dark " href="Admission.html"
+									id="navbarDropdown2" role="button" aria-expanded="false">
+									Admissions
+								</a>
+								<ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown2">
+									<li>
+										<a class="dropdown-item" href="Admission.html">Admission Process</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="fees-policy.html">Fees Policy</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="apply-now.html">Apply Now</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle active text-dark" href="gallery.html"
+									id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Media
+								</a>
+								<ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown3">
+									<li>
+										<a class="dropdown-item " href="gallery.html">Video Gallery</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="gallery.html">Photo Gallery</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item me-6 ">
+								<a class="nav-link text-dark" href="contacts.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</section>
         <!-- to carousel-->
         <section>
             <section class="carousel-scroll">
@@ -749,9 +771,57 @@
         © 2024 Website Developed by Agassi Students. Empowered by <a
             href="https://thesmartribe.com">thesmartribe.com</a>.
     </p>
-
+    <div id="loading-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+        <div style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+            <p>Please wait while we process your submission. This may take a few seconds due to security checks.</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
   
     <script>
+
+
+// Form submission handler
+document.getElementById('admission-form').addEventListener('submit', function (event) {
+    console.log("Submit event listener attached");
+
+    // Prevent default form submission
+    event.preventDefault();
+
+    // Validate all sections
+    if (!validateAllSections()) {
+        alert("Please fill in all required fields before submitting.");
+        return false;
+    }
+
+    // Show the loading modal
+    const loadingModal = document.getElementById('loading-modal');
+    loadingModal.style.display = 'flex';
+
+    // Update hidden fields for selected courses
+    const coreCoursesSelected = document.getElementById('core-courses-selected');
+    const electiveCoursesSelected = document.getElementById('elective-courses-selected');
+
+    // Store selected values before submission
+    if (coreCoursesSelected) {
+        coreCoursesSelected.value = Array.from(document.querySelectorAll('input[name="core-courses[]"]:checked'))
+            .map(cb => cb.value)
+            .join(', ');
+    }
+
+    if (electiveCoursesSelected) {
+        electiveCoursesSelected.value = Array.from(document.querySelectorAll('input[name="elective-courses[]"]:checked'))
+            .map(cb => cb.value)
+            .join(', ');
+    }
+
+    // Submit the form after a short delay (to allow the modal to be seen)
+    setTimeout(() => {
+        this.submit(); // Submit the form
+    }, 100); // Adjust the delay as needed
+});
+
+
         let currentSection = 1;
 
 function validateCurrentSection() {
@@ -868,6 +938,26 @@ function handleSubmit(event) {
 }
 
     </script>
+     	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+             crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     
+         <script>
+             AOS.init();
+         </script>
+
+
+
 </body>
 
 </html>
