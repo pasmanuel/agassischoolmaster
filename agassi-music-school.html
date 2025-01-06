@@ -460,8 +460,8 @@
                             <input type="email" id="Applicant-email" required name="Applicant-email" rows="3">
                         </div>
                         <div class="sub-form-group">
-                            <label for="Applicant-email">Ghana Card Number:</label>
-                            <input type="text" id="Applicant-email"  required name="Applicant-email">
+                            <label for="Applicant-ghana-card-number">Ghana Card Number:</label>
+                            <input type="text" id="Applicant-ghana-card-number"  required name="Applicant-ghana-card-number">
                         </div>
                     </div>
                     <div class="form-navigation">
@@ -758,9 +758,9 @@
                             </li>
                         </ul>
                     </div>
-                    <input type="radio" name="i-accept" id="i-accept" value="Accept">
+                    <input type="radio" name="i-accept" id="i-accept" value="Accept" required>
                     <label for="i-accept">Accept</label>
-                    <input type="radio" name="i-accept" id="i-decline" value="Decline">
+                    <input type="radio" name="i-accept" id="i-decline" value="Decline" required>
                     <label for="i-decline">Decline</label>
                     <div class="form-navigation">
                         <div class="form-navigation">
@@ -826,8 +826,13 @@
 
    <script src="./script/formscripts.js"></script>
    <script>
-     
-     let currentSection = 1;
+     // Debug console for mobile issues
+window.onerror = function(msg, url, lineNo, columnNo, error) {
+    console.log('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
+    return false;
+};
+
+let currentSection = 1;
 
 // Function to validate the current section
 function validateCurrentSection() {
@@ -835,7 +840,7 @@ function validateCurrentSection() {
     const requiredFields = currentFormSection.querySelectorAll('[required]');
     let isValid = true;
 
-    console.log("Validating section:", currentFormSection.id); // Debugging
+    console.log("Validating section:", currentFormSection.id);
 
     requiredFields.forEach((field) => {
         const errorMessage = field.nextElementSibling;
@@ -847,7 +852,7 @@ function validateCurrentSection() {
         // Handle standard input fields
         if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
             if (!field.value.trim()) {
-                console.log("Validation failed for field:", field); // Debugging
+                console.log("Validation failed for field:", field);
                 isValid = false;
                 field.classList.add('error');
 
@@ -864,7 +869,7 @@ function validateCurrentSection() {
             const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
 
             if (checkedOptions.length === 0) {
-                console.log("Validation failed for dropdown:", field); // Debugging
+                console.log("Validation failed for dropdown:", field);
                 isValid = false;
                 field.classList.add('error');
 
@@ -876,24 +881,23 @@ function validateCurrentSection() {
         }
     });
 
-    console.log("Validation result for section:", isValid); // Debugging
+    console.log("Validation result for section:", isValid);
     return isValid;
 }
 
 // Function to navigate to the next section
 function nextSection() {
-    console.log("Next button clicked"); // Debugging
+    console.log("Next button clicked");
 
-    // Only validate if we're not on the last section
     if (currentSection < document.querySelectorAll('.form-section').length && !validateCurrentSection()) {
-        console.log("Validation failed; cannot proceed to next section"); // Debugging
-        return; // Prevent navigating to the next section if validation fails
+        console.log("Validation failed; cannot proceed to next section");
+        return;
     }
 
     const totalSections = document.querySelectorAll('.form-section').length;
     if (currentSection < totalSections) {
         currentSection++;
-        console.log("Moving to section:", currentSection); // Debugging
+        console.log("Moving to section:", currentSection);
         updateNavigation();
         navigateTo(currentSection);
     }
@@ -901,12 +905,11 @@ function nextSection() {
 
 // Function to navigate to the previous section
 function prevSection() {
-    console.log("Back button clicked"); // Debugging
+    console.log("Back button clicked");
 
-    // No validation on the "Back" button; simply move to the previous section
     if (currentSection > 1) {
         currentSection--;
-        console.log("Moving to section:", currentSection); // Debugging
+        console.log("Moving to section:", currentSection);
         updateNavigation();
         navigateTo(currentSection);
     }
@@ -917,17 +920,14 @@ function navigateTo(sectionNumber) {
     const sections = document.querySelectorAll('.form-section');
     const navLinks = document.querySelectorAll('.side-nav a');
 
-    // Remove the 'active' class from all sections and nav links
     sections.forEach((section) => section.classList.remove('active'));
     navLinks.forEach((link) => link.classList.remove('active'));
 
-    // Add the 'active' class to the current section
     const selectedSection = document.getElementById('section' + sectionNumber);
     if (selectedSection) {
         selectedSection.classList.add('active');
     }
 
-    // Highlight the corresponding nav link
     if (navLinks[sectionNumber - 1]) {
         navLinks[sectionNumber - 1].classList.add('active');
     }
@@ -944,52 +944,18 @@ function updateNavigation() {
     nextButton.textContent = currentSection === totalSections ? 'Submit' : 'Next';
 }
 
-// Function to handle form submission
-function handleSubmit(event) {
-    console.log("Form submission initiated"); // Debugging
-    event.preventDefault(); // Prevent default form submission
-
-    // Validate all sections
-    if (!validateAllSections()) {
-        alert("Please fill in all required fields before submitting.");
-        return;
-    }
-
-    console.log("All sections validated"); // Debugging
-
-    // Disable checkboxes to prevent them from being submitted
-    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.disabled = true;
-    });
-
-    // Get the form element
-    const form = document.getElementById('admission-form');
-
-    // Submit the form traditionally
-    console.log("Submitting form..."); // Debugging
-    form.submit();
-
-    // Re-enable checkboxes if submission fails (optional)
-    setTimeout(() => {
-        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-            checkbox.disabled = false;
-        });
-    }, 5000); // Re-enable after 5 seconds (adjust as needed)
-}
-
 // Function to validate all sections
 function validateAllSections() {
     const sections = document.querySelectorAll('.form-section');
     let allValid = true;
 
     sections.forEach((section) => {
-        console.log("Validating section:", section.id); // Debugging
+        console.log("Validating section:", section.id);
         const requiredFields = section.querySelectorAll('[required]');
         requiredFields.forEach((field) => {
-            // Handle standard input fields
             if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
                 if (!field.value.trim()) {
-                    console.log("Validation failed for field:", field); // Debugging
+                    console.log("Validation failed for field:", field);
                     allValid = false;
                     field.classList.add('error');
 
@@ -1000,13 +966,12 @@ function validateAllSections() {
                 }
             }
 
-            // Handle custom dropdowns
             if (field.classList.contains('select-box')) {
                 const optionsContainer = field.nextElementSibling;
                 const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
 
                 if (checkedOptions.length === 0) {
-                    console.log("Validation failed for dropdown:", field); // Debugging
+                    console.log("Validation failed for dropdown:", field);
                     allValid = false;
                     field.classList.add('error');
 
@@ -1019,30 +984,63 @@ function validateAllSections() {
         });
     });
 
-    console.log("Overall validation result:", allValid); // Debugging
+    console.log("Overall validation result:", allValid);
     return allValid;
 }
 
-// Attach the handleSubmit function to the form's submit event
+// Form submission handler
 document.getElementById('admission-form').addEventListener('submit', function (event) {
-    console.log("Submit event listener attached"); // Debugging
-    handleSubmit(event);
+    console.log("Submit event listener attached");
+    
+    // Only prevent default if validation fails
+    if (!validateAllSections()) {
+        event.preventDefault();
+        alert("Please fill in all required fields before submitting.");
+        return false;
+    }
+    
+    // Update hidden fields for selected courses
+    const coreCoursesSelected = document.getElementById('core-courses-selected');
+    const electiveCoursesSelected = document.getElementById('elective-courses-selected');
+    
+    // Store selected values before submission
+    if (coreCoursesSelected) {
+        coreCoursesSelected.value = Array.from(document.querySelectorAll('input[name="core-courses[]"]:checked'))
+            .map(cb => cb.value)
+            .join(', ');
+    }
+    
+    if (electiveCoursesSelected) {
+        electiveCoursesSelected.value = Array.from(document.querySelectorAll('input[name="elective-courses[]"]:checked'))
+            .map(cb => cb.value)
+            .join(', ');
+    }
+    
+    // Let the form submit naturally
+    return true;
 });
 
 // Multiselect Dropdown Functionality
 document.querySelectorAll('.select-box').forEach(selectBox => {
-    const optionsContainer = selectBox.nextElementSibling;
-
-    // Toggle the dropdown visibility
+    // Handle click events
     selectBox.addEventListener('click', () => {
-        console.log("Dropdown toggled"); // Debugging
+        console.log("Dropdown toggled");
+        const optionsContainer = selectBox.nextElementSibling;
         optionsContainer.classList.toggle('show');
     });
+
+    // Handle touch events
+    selectBox.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        console.log("Touch started on dropdown");
+        const optionsContainer = selectBox.nextElementSibling;
+        optionsContainer.classList.toggle('show');
+    }, { passive: false });
 
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!selectBox.contains(e.target) && !optionsContainer.contains(e.target)) {
-            console.log("Dropdown closed (clicked outside)"); // Debugging
+            console.log("Dropdown closed (clicked outside)");
             optionsContainer.classList.remove('show');
         }
     });
@@ -1050,15 +1048,16 @@ document.querySelectorAll('.select-box').forEach(selectBox => {
     // Close dropdown on tab/escape key press
     selectBox.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' || e.key === 'Tab') {
-            console.log("Dropdown closed (Escape/Tab pressed)"); // Debugging
+            console.log("Dropdown closed (Escape/Tab pressed)");
             optionsContainer.classList.remove('show');
         }
     });
 
-    // Update the select box text and hidden input when an option is selected
+    // Update the select box text and hidden input when options are selected
+    const optionsContainer = selectBox.nextElementSibling;
     optionsContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
         checkbox.addEventListener('change', () => {
-            console.log("Checkbox changed"); // Debugging
+            console.log("Checkbox changed");
             const selectedOptions = Array.from(optionsContainer.querySelectorAll('input[type="checkbox"]:checked'))
                 .map(checkbox => checkbox.value)
                 .join(', ');
@@ -1070,17 +1069,18 @@ document.querySelectorAll('.select-box').forEach(selectBox => {
             const hiddenInput = selectBox.parentElement.querySelector('input[type="hidden"]');
             if (hiddenInput) {
                 hiddenInput.value = selectedOptions;
-                console.log("Hidden input updated:", hiddenInput.value); // Debugging
+                console.log("Hidden input updated:", hiddenInput.value);
             }
         });
     });
 });
 
-// Initialize the form by showing the first section
+// Initialize the form
 document.addEventListener('DOMContentLoaded', () => {
-    navigateTo(1); // Show the first section
-    updateNavigation(); // Update the navigation buttons
+    navigateTo(1);
+    updateNavigation();
 });
+ 
     </script>
 
 
