@@ -1292,7 +1292,11 @@ input{
   }
   
 
-
+  @media (max-width: 600px) {
+    button[type="submit"] {
+        display: none; /* Ensure this isn't hiding the submit button */
+    }
+}
   
 
 
