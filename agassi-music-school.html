@@ -21,74 +21,74 @@
         }
 
         /* whatsapp icon */
-		@keyframes fadeIn {
-			from {
-				opacity: 0;
-				transform:
-					translateY(20px);
-			}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform:
+                    translateY(20px);
+            }
 
-			to {
-				opacity: 1;
-				transform: translate(0);
-			}
-		}
+            to {
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
 
-		@keyframes heartbeat {
+        @keyframes heartbeat {
 
-			0%,
-			100% {
-				transform: scale(1);
-			}
+            0%,
+            100% {
+                transform: scale(1);
+            }
 
-			50% {
-				transform: scale(1.1);
+            50% {
+                transform: scale(1.1);
 
-			}
-		}
+            }
+        }
 
-		.whatsapp-icon {
-			position: fixed;
-			bottom: 50px;
-			right: 20px;
-			width: 60px;
-			height: 60px;
-			z-index: 1000;
-			animation: fadeIn 1s ease-in-out, heartbeat 2s infinite;
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            z-index: 1000;
+            animation: fadeIn 1s ease-in-out, heartbeat 2s infinite;
 
-		}
+        }
 
-		.whataspp-icon a {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
+        .whataspp-icon a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
 
-		.whataspp-icon img {
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-			transition: transform 0.3s;
-		}
+        .whataspp-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
 
-		.whataspp-icon img:hover {
-			transform: scale(1.1);
-		}
+        .whataspp-icon img:hover {
+            transform: scale(1.1);
+        }
 
-		@media(max-width:786px) {
-			.whataspp-icon {
-				bottom: 80px;
-				z-index: 1000;
-				right: 100px;
-			}
-		}
+        @media(max-width:786px) {
+            .whataspp-icon {
+                bottom: 80px;
+                z-index: 1000;
+                right: 100px;
+            }
+        }
 
-		@media (max-width:400px) {
-			.whataspp-icon {
-				display: none;
-			}
-		}
+        @media (max-width:400px) {
+            .whataspp-icon {
+                display: none;
+            }
+        }
 
         body {
             font-family: Arial, sans-serif;
@@ -378,8 +378,7 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./Images/dance1.jpg" loading="lazy" class="d-block w-100"
-                                alt="...">
+                            <img src="./Images/dance1.jpg" loading="lazy" class="d-block w-100" alt="...">
                             <div class="carousel-caption">
                                 <h2>Apply Now!</h2>
                                 <!-- <p>Some  placeholder content for the first slide.</p> -->
@@ -404,7 +403,7 @@
             </ul>
         </nav>
         <div class="form-content">
-            <form id="admission-form"  action="https://formspree.io/f/myzzbyor"  method="POST" >
+            <form id="admission-form" action="https://formspree.io/f/myzzbyor" method="POST">
                 <!-- Section 1: Applicant's Personal Data -->
                 <div id="section1" class="form-section active">
                     <h2>Applicant’s Personal Data</h2>
@@ -425,11 +424,11 @@
                     <div class="form-group">
                         <div class="sub-form-group">
                             <label for="Applicant-date-of-birth">Date of Birth:</label>
-                            <input type="date" id="Applicant-date-of-birth"  required name="Applicant-date-of-birth">
+                            <input type="date" id="Applicant-date-of-birth" required name="Applicant-date-of-birth">
                         </div>
                         <div class="sub-form-group">
                             <label for="Applicant-date-of-birth">Place of Birth:</label>
-                            <input type="text" id="Applicant-date-of-birth"  required name="Applicant-place-of-birth">
+                            <input type="text" id="Applicant-date-of-birth" required name="Applicant-place-of-birth">
                         </div>
                         <div class="sub-form-group">
                             <label for="Applicant-gender">Gender:</label>
@@ -447,13 +446,13 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="Applicant-address">Residential Address:</label>
-                            <input id="Applicant-address" name="Applicant-address"  required rows="3">
+                            <input id="Applicant-address" name="Applicant-address" required rows="3">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="sub-form-group">
                             <label for="Applicant-telephone">Telephone Number :</label>
-                            <input type="number" id="Applicant-telephone"  required name="Applicant-telephone" rows="3">
+                            <input type="number" id="Applicant-telephone" required name="Applicant-telephone" rows="3">
                         </div>
                         <div class="sub-form-group">
                             <label for="Applicant-email">Email:</label>
@@ -461,14 +460,15 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="Applicant-ghana-card-number">Ghana Card Number:</label>
-                            <input type="text" id="Applicant-ghana-card-number"  required name="Applicant-ghana-card-number">
+                            <input type="text" id="Applicant-ghana-card-number" required
+                                name="Applicant-ghana-card-number">
                         </div>
                     </div>
                     <div class="form-navigation">
                         <button class="primary" type="button" onclick="nextSection()">Next</button>
                     </div>
                 </div>
-            
+
                 <!-- Section 2: Academic Information -->
                 <div id="section2" class="form-section">
                     <h2>Academic Information</h2>
@@ -492,19 +492,20 @@
                             <input type="text" id="schoolLevel" name="schoolLevel">
                         </div>
                     </div>
-                   
+
                     <div class="form-navigation">
                         <button class="secondary" type="button" onclick="prevSection()">Back</button>
                         <button class="primary" type="button" onclick="nextSection()">Next</button>
                     </div>
                 </div>
-                
+
                 <!-- Section 3: AICAP COURSES -->
                 <div id="section3" class="form-section">
                     <h2>AICAP COURSES - What do you want Study?</h2>
                     <div class="form-group">
                         <div class="sub-form-group multiselect">
-                            <div class="select-box" tabindex="0" data-placeholder="Select Core Courses" required>Select Core Courses</div>
+                            <div class="select-box" tabindex="0" data-placeholder="Select Core Courses" required>Select
+                                Core Courses</div>
                             <div class="options-container">
                                 <label class="option">
                                     <input type="checkbox" value="Music Theory" name="core-courses[]">
@@ -538,7 +539,8 @@
                     <br><br>
                     <div class="form-group">
                         <div class="sub-form-group multiselect">
-                            <div class="select-box" tabindex="0" data-placeholder="Select Elective Courses">Select Elective Courses</div>
+                            <div class="select-box" tabindex="0" data-placeholder="Select Elective Courses">Select
+                                Elective Courses</div>
                             <div class="options-container">
                                 <label class="option">
                                     <input type="checkbox" value="Guitar" name="elective-courses[]">
@@ -592,8 +594,8 @@
                         <button class="primary" type="button" onclick="nextSection()">Next</button>
                     </div>
                 </div>
-                            
-        
+
+
 
                 <!-- Section 4: Family Data -->
                 <div id="section4" class="form-section">
@@ -619,7 +621,7 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="father-phone-number">Father's Telephone:</label>
-                            <input type="text" id="father-phone-number"  required name="father-phone-number">
+                            <input type="text" id="father-phone-number" required name="father-phone-number">
                         </div>
                         <div class="sub-form-group">
                             <label for="father-email">Father's Email:</label>
@@ -648,7 +650,7 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="mother-phone-number">Mother's Telephone:</label>
-                            <input type="text" id="mother-phone-number"  required name="mother-phone-number">
+                            <input type="text" id="mother-phone-number" required name="mother-phone-number">
                         </div>
                         <div class="sub-form-group">
                             <label for="mother-email">Mother's Email:</label>
@@ -677,7 +679,7 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="Guardian-phone">Guardian's Telephone:</label>
-                            <input type="text" id="Guardian-phone"  required name="Guardian-phone">
+                            <input type="text" id="Guardian-phone" required name="Guardian-phone">
                         </div>
                         <div class="sub-form-group">
                             <label for="Guardian-gmail">Guardian's Email:</label>
@@ -689,36 +691,39 @@
                         <button class="primary" type="button" onclick="nextSection()">Next</button>
                     </div>
                 </div>
-            
+
                 <!-- Section 5: Emergency Contact -->
                 <div id="section5" class="form-section">
                     <h2>Emergency Contact</h2>
                     <div class="form-group">
                         <div class="sub-form-group">
                             <label for="Emergency Contact Name 1">Emergency Contact Name 1:</label>
-                            <input type="text" id="Emergency-Contact-Name-1"  required name="Emergency-Contact-Name-1">
+                            <input type="text" id="Emergency-Contact-Name-1" required name="Emergency-Contact-Name-1">
                         </div>
                         <div class="sub-form-group">
                             <label for="Emergency-Contact-phone-1">Contact Number:</label>
-                            <input type="text" id="Emergency-Contact-phone-1"  required name="Emergency-Contact-phone-1">
+                            <input type="text" id="Emergency-Contact-phone-1" required name="Emergency-Contact-phone-1">
                         </div>
                         <div class="sub-form-group">
                             <label for="Emergency-Contact-relationship-1">Relationship:</label>
-                            <input type="text" id="Emergency-Contact-relationship-1"  required name="Emergency-Contact-relationship-1">
+                            <input type="text" id="Emergency-Contact-relationship-1" required
+                                name="Emergency-Contact-relationship-1">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="sub-form-group">
                             <label for="Emergency-Contact-Name-2">Emergency Contact Name 2:</label>
-                            <input type="text" id="Emergency-Contact-Name-2"  required name="Emergency-Contact-Name-2">
+                            <input type="text" id="Emergency-Contact-Name-2" required name="Emergency-Contact-Name-2">
                         </div>
                         <div class="sub-form-group">
                             <label for="Emergency-Contact-number-2">Contact Number:</label>
-                            <input type="text" id="Emergency-Contact-number-2"  required name="Emergency-Contact-number-2">
+                            <input type="text" id="Emergency-Contact-number-2" required
+                                name="Emergency-Contact-number-2">
                         </div>
                         <div class="sub-form-group">
                             <label for="Emergency-Contact-relationship-2">Relationship:</label>
-                            <input type="text" id="Emergency-Contact-relationship-2"  required name="Emergency-Contact-relationship-2">
+                            <input type="text" id="Emergency-Contact-relationship-2" required
+                                name="Emergency-Contact-relationship-2">
                         </div>
                     </div>
                     <div class="form-navigation">
@@ -726,7 +731,7 @@
                         <button class="primary" type="button" onclick="nextSection()">Next</button>
                     </div>
                 </div>
-            
+
                 <!-- Section 6: Declaration -->
                 <div id="section6" class="form-section">
                     <h2>Declaration</h2>
@@ -767,20 +772,20 @@
                             <button class="secondary" type="button" onclick="prevSection()">Back</button>
                             <button class="primary" type="submit">Submit</button>
                         </div>
-                        
+
                     </div>
                 </div>
-            </form> 
-       </div> 
+            </form>
+        </div>
     </div>
     <div class="whatsapp-icon">
-		<a href="https://wa.me/+233244270815" target="_blank">
-			<img src="./Images/icons8-whatsapp-48.png" title="Contact Us" alt="whatsapp">
-		</a>
+        <a href="https://wa.me/+233244270815" target="_blank">
+            <img src="./Images/icons8-whatsapp-48.png" title="Contact Us" alt="whatsapp">
+        </a>
 
-	</div>
-   
-    
+    </div>
+
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -824,392 +829,402 @@
             href="https://thesmartribe.com">thesmartribe.com</a>.
     </p>
 
-   <script src="./script/formscripts.js"></script>
-   <script>
-     // Debug console for mobile issues
-window.onerror = function(msg, url, lineNo, columnNo, error) {
-    console.log('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
-    return false;
-};
+    <script src="./script/formscripts.js"></script>
+    <script>
+        // Debug console for mobile issues
+        window.onerror = function (msg, url, lineNo, columnNo, error) {
+            console.log('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
+            return false;
+        };
 
-let currentSection = 1;
+        let currentSection = 1;
 
-// Function to validate the current section
-function validateCurrentSection() {
-    const currentFormSection = document.querySelector('.form-section.active');
-    const requiredFields = currentFormSection.querySelectorAll('[required]');
-    let isValid = true;
+        // Function to validate the current section
+        function validateCurrentSection() {
+            const currentFormSection = document.querySelector('.form-section.active');
+            const requiredFields = currentFormSection.querySelectorAll('[required]');
+            let isValid = true;
 
-    console.log("Validating section:", currentFormSection.id);
+            console.log("Validating section:", currentFormSection.id);
 
-    requiredFields.forEach((field) => {
-        const errorMessage = field.nextElementSibling;
-        if (errorMessage && errorMessage.classList.contains('error-message')) {
-            errorMessage.remove();
-        }
-        field.classList.remove('error');
-
-        // Handle standard input fields
-        if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
-            if (!field.value.trim()) {
-                console.log("Validation failed for field:", field);
-                isValid = false;
-                field.classList.add('error');
-
-                const error = document.createElement('span');
-                error.className = 'error-message';
-                error.textContent = 'This field is required';
-                field.parentNode.appendChild(error);
-            }
-        }
-
-        // Handle custom dropdowns (multiselect)
-        if (field.classList.contains('select-box')) {
-            const optionsContainer = field.nextElementSibling;
-            const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
-
-            if (checkedOptions.length === 0) {
-                console.log("Validation failed for dropdown:", field);
-                isValid = false;
-                field.classList.add('error');
-
-                const error = document.createElement('span');
-                error.className = 'error-message';
-                error.textContent = 'Please select at least one option';
-                field.parentNode.appendChild(error);
-            }
-        }
-    });
-
-    console.log("Validation result for section:", isValid);
-    return isValid;
-}
-
-// Function to navigate to the next section
-function nextSection() {
-    console.log("Next button clicked");
-
-    if (currentSection < document.querySelectorAll('.form-section').length && !validateCurrentSection()) {
-        console.log("Validation failed; cannot proceed to next section");
-        return;
-    }
-
-    const totalSections = document.querySelectorAll('.form-section').length;
-    if (currentSection < totalSections) {
-        currentSection++;
-        console.log("Moving to section:", currentSection);
-        updateNavigation();
-        navigateTo(currentSection);
-    }
-}
-
-// Function to navigate to the previous section
-function prevSection() {
-    console.log("Back button clicked");
-
-    if (currentSection > 1) {
-        currentSection--;
-        console.log("Moving to section:", currentSection);
-        updateNavigation();
-        navigateTo(currentSection);
-    }
-}
-
-// Function to navigate to a specific section
-function navigateTo(sectionNumber) {
-    const sections = document.querySelectorAll('.form-section');
-    const navLinks = document.querySelectorAll('.side-nav a');
-
-    sections.forEach((section) => section.classList.remove('active'));
-    navLinks.forEach((link) => link.classList.remove('active'));
-
-    const selectedSection = document.getElementById('section' + sectionNumber);
-    if (selectedSection) {
-        selectedSection.classList.add('active');
-    }
-
-    if (navLinks[sectionNumber - 1]) {
-        navLinks[sectionNumber - 1].classList.add('active');
-    }
-}
-
-// Function to update navigation buttons
-function updateNavigation() {
-    const prevButton = document.querySelector('.form-navigation .secondary');
-    const nextButton = document.querySelector('.form-navigation .primary');
-
-    const totalSections = document.querySelectorAll('.form-section').length;
-
-    prevButton.disabled = currentSection === 1;
-    nextButton.textContent = currentSection === totalSections ? 'Submit' : 'Next';
-}
-
-// Function to validate all sections
-function validateAllSections() {
-    const sections = document.querySelectorAll('.form-section');
-    let allValid = true;
-
-    sections.forEach((section) => {
-        console.log("Validating section:", section.id);
-        const requiredFields = section.querySelectorAll('[required]');
-        requiredFields.forEach((field) => {
-            if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
-                if (!field.value.trim()) {
-                    console.log("Validation failed for field:", field);
-                    allValid = false;
-                    field.classList.add('error');
-
-                    const error = document.createElement('span');
-                    error.className = 'error-message';
-                    error.textContent = 'This field is required';
-                    field.parentNode.appendChild(error);
+            requiredFields.forEach((field) => {
+                const errorMessage = field.nextElementSibling;
+                if (errorMessage && errorMessage.classList.contains('error-message')) {
+                    errorMessage.remove();
                 }
-            }
+                field.classList.remove('error');
 
-            if (field.classList.contains('select-box')) {
-                const optionsContainer = field.nextElementSibling;
-                const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
+                // Handle standard input fields
+                if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
+                    if (!field.value.trim()) {
+                        console.log("Validation failed for field:", field);
+                        isValid = false;
+                        field.classList.add('error');
 
-                if (checkedOptions.length === 0) {
-                    console.log("Validation failed for dropdown:", field);
-                    allValid = false;
-                    field.classList.add('error');
-
-                    const error = document.createElement('span');
-                    error.className = 'error-message';
-                    error.textContent = 'Please select at least one option';
-                    field.parentNode.appendChild(error);
+                        const error = document.createElement('span');
+                        error.className = 'error-message';
+                        error.textContent = 'This field is required';
+                        field.parentNode.appendChild(error);
+                    }
                 }
-            }
-        });
-    });
 
-    console.log("Overall validation result:", allValid);
-    return allValid;
-}
+                // Handle custom dropdowns (multiselect)
+                if (field.classList.contains('select-box')) {
+                    const optionsContainer = field.nextElementSibling;
+                    const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
 
-// Form submission handler
-document.getElementById('admission-form').addEventListener('submit', function (event) {
-    console.log("Submit event listener attached");
-    
-    // Only prevent default if validation fails
-    if (!validateAllSections()) {
-        event.preventDefault();
-        alert("Please fill in all required fields before submitting.");
-        return false;
-    }
-    
-    // Update hidden fields for selected courses
-    const coreCoursesSelected = document.getElementById('core-courses-selected');
-    const electiveCoursesSelected = document.getElementById('elective-courses-selected');
-    
-    // Store selected values before submission
-    if (coreCoursesSelected) {
-        coreCoursesSelected.value = Array.from(document.querySelectorAll('input[name="core-courses[]"]:checked'))
-            .map(cb => cb.value)
-            .join(', ');
-    }
-    
-    if (electiveCoursesSelected) {
-        electiveCoursesSelected.value = Array.from(document.querySelectorAll('input[name="elective-courses[]"]:checked'))
-            .map(cb => cb.value)
-            .join(', ');
-    }
-    
-    // Let the form submit naturally
-    return true;
-});
+                    if (checkedOptions.length === 0) {
+                        console.log("Validation failed for dropdown:", field);
+                        isValid = false;
+                        field.classList.add('error');
 
-// Multiselect Dropdown Functionality
-document.querySelectorAll('.select-box').forEach(selectBox => {
-    // Handle click events
-    selectBox.addEventListener('click', () => {
-        console.log("Dropdown toggled");
-        const optionsContainer = selectBox.nextElementSibling;
-        optionsContainer.classList.toggle('show');
-    });
+                        const error = document.createElement('span');
+                        error.className = 'error-message';
+                        error.textContent = 'Please select at least one option';
+                        field.parentNode.appendChild(error);
+                    }
+                }
+            });
 
-    // Handle touch events
-    selectBox.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        console.log("Touch started on dropdown");
-        const optionsContainer = selectBox.nextElementSibling;
-        optionsContainer.classList.toggle('show');
-    }, { passive: false });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!selectBox.contains(e.target) && !optionsContainer.contains(e.target)) {
-            console.log("Dropdown closed (clicked outside)");
-            optionsContainer.classList.remove('show');
+            console.log("Validation result for section:", isValid);
+            return isValid;
         }
-    });
 
-    // Close dropdown on tab/escape key press
-    selectBox.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' || e.key === 'Tab') {
-            console.log("Dropdown closed (Escape/Tab pressed)");
-            optionsContainer.classList.remove('show');
-        }
-    });
+        // Function to navigate to the next section
+        function nextSection() {
+            console.log("Next button clicked");
 
-    // Update the select box text and hidden input when options are selected
-    const optionsContainer = selectBox.nextElementSibling;
-    optionsContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            console.log("Checkbox changed");
-            const selectedOptions = Array.from(optionsContainer.querySelectorAll('input[type="checkbox"]:checked'))
-                .map(checkbox => checkbox.value)
-                .join(', ');
-
-            // Update the select box text
-            selectBox.textContent = selectedOptions || selectBox.getAttribute('data-placeholder');
-
-            // Update the hidden input field
-            const hiddenInput = selectBox.parentElement.querySelector('input[type="hidden"]');
-            if (hiddenInput) {
-                hiddenInput.value = selectedOptions;
-                console.log("Hidden input updated:", hiddenInput.value);
+            if (currentSection < document.querySelectorAll('.form-section').length && !validateCurrentSection()) {
+                console.log("Validation failed; cannot proceed to next section");
+                return;
             }
-        });
-    });
-});
 
-// Initialize the form
-document.addEventListener('DOMContentLoaded', () => {
-    navigateTo(1);
-    updateNavigation();
-});
- 
+            const totalSections = document.querySelectorAll('.form-section').length;
+            if (currentSection < totalSections) {
+                currentSection++;
+                console.log("Moving to section:", currentSection);
+                updateNavigation();
+                navigateTo(currentSection);
+            }
+        }
+
+        // Function to navigate to the previous section
+        function prevSection() {
+            console.log("Back button clicked");
+
+            if (currentSection > 1) {
+                currentSection--;
+                console.log("Moving to section:", currentSection);
+                updateNavigation();
+                navigateTo(currentSection);
+            }
+        }
+
+        // Function to navigate to a specific section
+        function navigateTo(sectionNumber) {
+            const sections = document.querySelectorAll('.form-section');
+            const navLinks = document.querySelectorAll('.side-nav a');
+
+            sections.forEach((section) => section.classList.remove('active'));
+            navLinks.forEach((link) => link.classList.remove('active'));
+
+            const selectedSection = document.getElementById('section' + sectionNumber);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+
+            if (navLinks[sectionNumber - 1]) {
+                navLinks[sectionNumber - 1].classList.add('active');
+            }
+        }
+
+        // Function to update navigation buttons
+        function updateNavigation() {
+            const prevButton = document.querySelector('.form-navigation .secondary');
+            const nextButton = document.querySelector('.form-navigation .primary');
+
+            const totalSections = document.querySelectorAll('.form-section').length;
+
+            prevButton.disabled = currentSection === 1;
+            nextButton.textContent = currentSection === totalSections ? 'Submit' : 'Next';
+        }
+
+        // Function to validate all sections
+        function validateAllSections() {
+            const sections = document.querySelectorAll('.form-section');
+            let allValid = true;
+
+            sections.forEach((section) => {
+                console.log("Validating section:", section.id);
+                const requiredFields = section.querySelectorAll('[required]');
+                requiredFields.forEach((field) => {
+                    if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
+                        if (!field.value.trim()) {
+                            console.log("Validation failed for field:", field);
+                            allValid = false;
+                            field.classList.add('error');
+
+                            const error = document.createElement('span');
+                            error.className = 'error-message';
+                            error.textContent = 'This field is required';
+                            field.parentNode.appendChild(error);
+                        }
+                    }
+
+                    if (field.classList.contains('select-box')) {
+                        const optionsContainer = field.nextElementSibling;
+                        const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
+
+                        if (checkedOptions.length === 0) {
+                            console.log("Validation failed for dropdown:", field);
+                            allValid = false;
+                            field.classList.add('error');
+
+                            const error = document.createElement('span');
+                            error.className = 'error-message';
+                            error.textContent = 'Please select at least one option';
+                            field.parentNode.appendChild(error);
+                        }
+                    }
+                });
+            });
+
+            console.log("Overall validation result:", allValid);
+            return allValid;
+        }
+
+        // Form submission handler
+        document.getElementById('admission-form').addEventListener('submit', function (event) {
+            console.log("Submit event listener attached");
+
+            // Only prevent default if validation fails
+            if (!validateAllSections()) {
+                event.preventDefault();
+                alert("Please fill in all required fields before submitting.");
+                return false;
+            }
+
+            // Update hidden fields for selected courses
+            const coreCoursesSelected = document.getElementById('core-courses-selected');
+            const electiveCoursesSelected = document.getElementById('elective-courses-selected');
+
+            // Store selected values before submission
+            if (coreCoursesSelected) {
+                coreCoursesSelected.value = Array.from(document.querySelectorAll('input[name="core-courses[]"]:checked'))
+                    .map(cb => cb.value)
+                    .join(', ');
+            }
+
+            if (electiveCoursesSelected) {
+                electiveCoursesSelected.value = Array.from(document.querySelectorAll('input[name="elective-courses[]"]:checked'))
+                    .map(cb => cb.value)
+                    .join(', ');
+            }
+
+            // Let the form submit naturally
+            return true;
+        });
+
+        // Multiselect Dropdown Functionality
+        document.querySelectorAll('.select-box').forEach(selectBox => {
+            // Handle click events
+            selectBox.addEventListener('click', () => {
+                console.log("Dropdown toggled");
+                const optionsContainer = selectBox.nextElementSibling;
+                optionsContainer.classList.toggle('show');
+            });
+
+            // Handle touch events
+            selectBox.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                console.log("Touch started on dropdown");
+                const optionsContainer = selectBox.nextElementSibling;
+                optionsContainer.classList.toggle('show');
+            }, { passive: false });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!selectBox.contains(e.target) && !optionsContainer.contains(e.target)) {
+                    console.log("Dropdown closed (clicked outside)");
+                    optionsContainer.classList.remove('show');
+                }
+            });
+
+            // Close dropdown on tab/escape key press
+            selectBox.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' || e.key === 'Tab') {
+                    console.log("Dropdown closed (Escape/Tab pressed)");
+                    optionsContainer.classList.remove('show');
+                }
+            });
+
+            // Update the select box text and hidden input when options are selected
+            const optionsContainer = selectBox.nextElementSibling;
+            optionsContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    console.log("Checkbox changed");
+                    const selectedOptions = Array.from(optionsContainer.querySelectorAll('input[type="checkbox"]:checked'))
+                        .map(checkbox => checkbox.value)
+                        .join(', ');
+
+                    // Update the select box text
+                    selectBox.textContent = selectedOptions || selectBox.getAttribute('data-placeholder');
+
+                    // Update the hidden input field
+                    const hiddenInput = selectBox.parentElement.querySelector('input[type="hidden"]');
+                    if (hiddenInput) {
+                        hiddenInput.value = selectedOptions;
+                        console.log("Hidden input updated:", hiddenInput.value);
+                    }
+                });
+            });
+        });
+
+        // Initialize the form
+        document.addEventListener('DOMContentLoaded', () => {
+            navigateTo(1);
+            updateNavigation();
+        });
+
     </script>
 
 
-<style>
+    <style>
+        .side-nav a.active {
+            font-weight: bold;
+            color: #007bff;
+            animation: pulse 1s infinite;
+            /* Add a pulsing animation */
+        }
 
-.side-nav a.active {
-    font-weight: bold;
-    color: #007bff;
-    animation: pulse 1s infinite; /* Add a pulsing animation */
-}
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-/* .side-nav a.active {
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* .side-nav a.active {
     font-weight: bold;
     color: #007bff; 
     text-decoration: underline;
 } */
-    /* Dropdown Container */
-.select-box {
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    background-color: #f9f9f9;
-    position: relative;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+        /* Dropdown Container */
+        .select-box {
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            position: relative;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
 
-/* Dropdown Arrow */
-.select-box::after {
-    content: '▼';
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 12px;
-    color: #666;
-    transition: transform 0.3s ease;
-}
+        /* Dropdown Arrow */
+        .select-box::after {
+            content: '▼';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: #666;
+            transition: transform 0.3s ease;
+        }
 
-/* Dropdown Options Container */
-.options-container {
-    max-height: 0;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    padding: 0 10px;
-    background-color: #fff;
-    border-radius: 4px;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-}
+        /* Dropdown Options Container */
+        .options-container {
+            max-height: 0;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            padding: 0 10px;
+            background-color: #fff;
+            border-radius: 4px;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
 
-/* Show Dropdown Options */
-.options-container.show {
-    max-height: 200px; /* Adjust based on content height */
-    padding: 10px;
-}
+        /* Show Dropdown Options */
+        .options-container.show {
+            max-height: 200px;
+            /* Adjust based on content height */
+            padding: 10px;
+        }
 
-/* Dropdown Options */
-.option {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
+        /* Dropdown Options */
+        .option {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
 
-/* Hide Default Checkbox */
-.option input {
-    display: none;
-}
+        /* Hide Default Checkbox */
+        .option input {
+            display: none;
+        }
 
-/* Unchecked Icon */
-.option .unchecked {
-    display: inline-block;
-    color: #ccc;
-    margin-right: 8px;
-    font-size: 14px;
-}
+        /* Unchecked Icon */
+        .option .unchecked {
+            display: inline-block;
+            color: #ccc;
+            margin-right: 8px;
+            font-size: 14px;
+        }
 
-/* Checked Icon */
-.option .checked {
-    display: none;
-    color: #007bff;
-    margin-right: 8px;
-    font-size: 14px;
-}
+        /* Checked Icon */
+        .option .checked {
+            display: none;
+            color: #007bff;
+            margin-right: 8px;
+            font-size: 14px;
+        }
 
-/* Show Checked Icon When Checkbox is Checked */
-.option input:checked ~ .unchecked {
-    display: none;
-}
+        /* Show Checked Icon When Checkbox is Checked */
+        .option input:checked~.unchecked {
+            display: none;
+        }
 
-.option input:checked ~ .checked {
-    display: inline-block;
-}
+        .option input:checked~.checked {
+            display: inline-block;
+        }
 
-/* Hover Effects */
-.select-box:hover {
-     background-color: #00693e;
-     color: white;
+        /* Hover Effects */
+        .select-box:hover {
+            background-color: #00693e;
+            color: white;
 
-}
+        }
 
-.option:hover {
-    background-color: #00693e;
-    color: white;
-}
+        .option:hover {
+            background-color: #00693e;
+            color: white;
+        }
 
-/* Rotate Arrow When Dropdown is Open */
-.select-box.active::after {
-    transform: translateY(-50%) rotate(180deg);
-}
+        /* Rotate Arrow When Dropdown is Open */
+        .select-box.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
 
 
 
-.primary{
-    z-index: 10;
-    position: relative;
-}
-
-</style>
+        .primary {
+            z-index: 10;
+            position: relative;
+        }
+    </style>
 
 </body>
+
 </html>
