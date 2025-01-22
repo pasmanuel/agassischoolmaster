@@ -347,7 +347,7 @@
                                         <li><a class="dropdown-item" href="Admission.html">Admission Process</a></li>
                                         <li><a class="dropdown-item" href="#">Fees Policy</a></li>
                                         <li>
-                                            <a class="dropdown-item" href="apply-now.html">Apply Now</a>
+                                            <a class="dropdown-item" href="agassi-music-school.html">School Of Music</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -490,7 +490,13 @@
                         </div>
                         <div class="sub-form-group">
                             <label for="schoolLevel">Level</label>
-                            <input type="text" id="schoolLevel" name="schoolLevel">
+                            <select id="level" name="educationalLevel">
+                                <option value="">Select</option>
+                                <option value="BEGINNER">BEGINNER</option>
+                                <option value="INTERMEDIATE">INTERMEDIATE</option>
+                                <option value="ADVANCE">ADVANCE</option>
+                                
+                            </select>
                         </div>
                     </div>
 
@@ -499,102 +505,95 @@
                         <button class="primary" type="button" onclick="nextSection()">Next</button>
                     </div>
                 </div>
-
+                    
                 <!-- Section 3: AICAP COURSES -->
-                <div id="section3" class="form-section">
-                    <h2>AICAP COURSES - What do you want to Study?</h2>
-                    <div class="form-group">
-                        <div class="sub-form-group multiselect">
-                            <div class="select-box" tabindex="0" data-placeholder="Select Core Courses" required>Select
-                                Core Courses</div>
-                            <div class="options-container">
-                                <label class="option">
-                                    <input type="checkbox" value="Music Theory" name="core-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Music Theory
-                                </label>
-                                <label class="option">
-                                    <input type="checkbox" value="Piano/Keyboard" name="core-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Piano/Keyboard
-                                </label>
-                                <label class="option">
-                                    <input type="checkbox" value="Atentenben" name="core-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Atentenben
-                                </label>
-                                <label class="option">
-                                    <input type="checkbox" value="African Dance" name="core-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    African Dance
-                                </label>
-                            </div>
-                            <!-- Hidden input to store selected core courses -->
-                            <input type="hidden" name="core-courses-selected" id="core-courses-selected">
-                        </div>
-                    </div>
-                    <br><br>
-                    <div class="form-group">
-                        <div class="sub-form-group multiselect">
-                            <div class="select-box" tabindex="0" data-placeholder="Select Elective Courses">Select
-                                Elective Courses</div>
-                            <div class="options-container">
-                                <label class="option">
-                                    <input type="checkbox" value="Guitar" name="elective-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Guitar
-                                </label>
-                                <label class="option">
-                                    <input type="checkbox" value="Violin" name="elective-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Violin
-                                </label>
-                                <label class="option">
-                                    <input type="checkbox" value="Cello" name="elective-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Cello
-                                </label>
-                                <label class="option">
-                                    <input type="checkbox" value="Trumpet" name="elective-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Trumpet
-                                </label>
-                                <label class="option">
-                                    <input type="checkbox" value="Clarinet" name="elective-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Clarinet
-                                </label>
-                                <label class="option">
-                                    <input type="checkbox" value="Saxophone" name="elective-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Saxophone
-                                </label>
-                                <label class="option">
-                                    <input type="checkbox" value="Vocal Training" name="elective-courses[]">
-                                    <i class="fa fa-check unchecked"></i>
-                                    <i class="fa fa-check-circle checked"></i>
-                                    Vocal Training
-                                </label>
-                            </div>
-                            <!-- Hidden input to store selected elective courses -->
-                            <input type="hidden" name="elective-courses-selected" id="elective-courses-selected">
-                        </div>
-                    </div>
-                    <div class="form-navigation">
-                        <button class="secondary" type="button" onclick="prevSection()">Back</button>
-                        <button class="primary" type="button" onclick="nextSection()">Next</button>
-                    </div>
-                </div>
+<div id="section3" class="form-section">
+    <h2>AICAP COURSES - What do you want to Study?</h2>
+    <div class="form-group">
+        <div class="sub-form-group">
+            <h3>Core Courses (Required)</h3>
+            <ul class="core-courses-list">
+                <li>Music Theory</li>
+                <li>Piano/Keyboard</li>
+                <li>Atentenben</li>
+                <li>African Dance</li>
+            </ul>
+            <!-- Hidden input to store core courses (since they are fixed) -->
+            <input type="hidden" name="core-courses-selected" id="core-courses-selected" value="Music Theory, Piano/Keyboard, Atentenben, African Dance">
+        </div>
+    </div>
+    <br><br>
+    <!-- Elective Courses Grouped -->
+    <div class="form-group">
+        <h3>Select Elective Courses</h3>
+
+        <!-- String Instruments -->
+        <div class="elective-category">
+            <h4 class="category-title">String Instruments:</h4>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="string-instruments" value="Guitar">
+                    Guitar
+                </label>
+                <label>
+                    <input type="checkbox" name="string-instruments" value="Violin">
+                    Violin
+                </label>
+                <label>
+                    <input type="checkbox" name="string-instruments" value="Cello">
+                    Cello
+                </label>
+            </div>
+        </div>
+
+        <!-- Wind Instruments -->
+        <div class="elective-category">
+            <h4 class="category-title">Wind Instruments:</h4>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="wind-instruments" value="Trumpet">
+                    Trumpet
+                </label>
+                <label>
+                    <input type="checkbox" name="wind-instruments" value="Saxophone">
+                    Saxophone
+                </label>
+                <label>
+                    <input type="checkbox" name="wind-instruments" value="Clarinet">
+                    Clarinet
+                </label>
+                <label>
+                    <input type="checkbox" name="wind-instruments" value="Trombone">
+                    Trombone
+                </label>
+            </div>
+        </div>
+
+        <!-- Keyboard -->
+        <div class="elective-category">
+            <h4 class="category-title">Keyboard:</h4>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="keyboard" value="Piano/Organ">
+                    Piano/Organ
+                </label>
+            </div>
+        </div>
+
+        <!-- Hidden input to store selected elective courses -->
+        <input type="hidden" name="elective-courses-selected" id="elective-courses-selected">
+    </div>
+
+    <!-- Form Navigation -->
+    <div class="form-navigation">
+        <button class="secondary" type="button" onclick="prevSection()">Back</button>
+        <button class="primary" type="button" onclick="nextSection()">Next</button>
+    </div>
+</div>
+
+
+
+
 
 
 
@@ -840,170 +839,46 @@
    </div>
     <script src="./script/formscripts.js"></script>
     <script>
-        
-        // Debug console for mobile issues
-window.onerror = function (msg, url, lineNo, columnNo, error) {
-    console.log('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
-    return false;
-};
+    
+    // Debug console for mobile issues
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+        console.log('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
+        return false;
+    };
 
-let currentSection = 1;
+    let currentSection = 1; // Tracks the current section
 
-// Function to validate the email field
-function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
-    return regex.test(email);
-}
-
-// Function to scroll to an invalid field
-function scrollToInvalidField(field) {
-    field.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-// Function to validate the current section
-function validateCurrentSection() {
-    const currentFormSection = document.querySelector('.form-section.active');
-    const requiredFields = currentFormSection.querySelectorAll('[required]');
-    let isValid = true;
-
-    console.log("Validating section:", currentFormSection.id);
-
-    requiredFields.forEach((field) => {
-        const errorMessage = field.nextElementSibling;
-        if (errorMessage && errorMessage.classList.contains('error-message')) {
-            errorMessage.remove();
-        }
-        field.classList.remove('error');
-
-        // Handle standard input fields
-        if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
-            if (!field.value.trim()) {
-                console.log("Validation failed for field:", field);
-                isValid = false;
-                field.classList.add('error');
-
-                const error = document.createElement('span');
-                error.className = 'error-message';
-                error.textContent = 'This field is required';
-                field.parentNode.appendChild(error);
-
-                // Scroll to the invalid field
-                scrollToInvalidField(field);
-            }
-
-            // Special validation for the email field
-            if (field.name === 'Applicant-email' && field.value.trim() && !validateEmail(field.value.trim())) {
-                console.log("Validation failed for email field:", field);
-                isValid = false;
-                field.classList.add('error');
-
-                const error = document.createElement('span');
-                error.className = 'error-message';
-                error.textContent = 'Please enter a valid email address';
-                field.parentNode.appendChild(error);
-
-                // Scroll to the invalid field
-                scrollToInvalidField(field);
-            }
-        }
-
-        // Handle custom dropdowns (multiselect)
-        if (field.classList.contains('select-box')) {
-            const optionsContainer = field.nextElementSibling;
-            const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
-
-            if (checkedOptions.length === 0) {
-                console.log("Validation failed for dropdown:", field);
-                isValid = false;
-                field.classList.add('error');
-
-                const error = document.createElement('span');
-                error.className = 'error-message';
-                error.textContent = 'Please select at least one option';
-                field.parentNode.appendChild(error);
-
-                // Scroll to the invalid field
-                scrollToInvalidField(field);
-            }
-        }
-    });
-
-    console.log("Validation result for section:", isValid);
-    return isValid;
-}
-
-// Function to navigate to the next section
-function nextSection() {
-    console.log("Next button clicked");
-
-    if (currentSection < document.querySelectorAll('.form-section').length && !validateCurrentSection()) {
-        console.log("Validation failed; cannot proceed to next section");
-        return;
+    // Function to validate the email field
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
+        return regex.test(email);
     }
 
-    const totalSections = document.querySelectorAll('.form-section').length;
-    if (currentSection < totalSections) {
-        currentSection++;
-        console.log("Moving to section:", currentSection);
-        updateNavigation();
-        navigateTo(currentSection);
-    }
-}
-
-// Function to navigate to the previous section
-function prevSection() {
-    console.log("Back button clicked");
-
-    if (currentSection > 1) {
-        currentSection--;
-        console.log("Moving to section:", currentSection);
-        updateNavigation();
-        navigateTo(currentSection);
-    }
-}
-
-// Function to navigate to a specific section
-function navigateTo(sectionNumber) {
-    const sections = document.querySelectorAll('.form-section');
-    const navLinks = document.querySelectorAll('.side-nav a');
-
-    sections.forEach((section) => section.classList.remove('active'));
-    navLinks.forEach((link) => link.classList.remove('active'));
-
-    const selectedSection = document.getElementById('section' + sectionNumber);
-    if (selectedSection) {
-        selectedSection.classList.add('active');
+    // Function to scroll to an invalid field
+    function scrollToInvalidField(field) {
+        field.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
-    if (navLinks[sectionNumber - 1]) {
-        navLinks[sectionNumber - 1].classList.add('active');
-    }
-}
+    // Function to validate the current section
+    function validateCurrentSection() {
+        const currentFormSection = document.querySelector('.form-section.active');
+        const requiredFields = currentFormSection.querySelectorAll('[required]');
+        let isValid = true;
 
-// Function to update navigation buttons
-function updateNavigation() {
-    const prevButton = document.querySelector('.form-navigation .secondary');
-    const nextButton = document.querySelector('.form-navigation .primary');
+        console.log("Validating section:", currentFormSection.id);
 
-    const totalSections = document.querySelectorAll('.form-section').length;
-
-    prevButton.disabled = currentSection === 1;
-    nextButton.textContent = currentSection === totalSections ? 'Submit' : 'Next';
-}
-
-// Function to validate all sections
-function validateAllSections() {
-    const sections = document.querySelectorAll('.form-section');
-    let allValid = true;
-
-    sections.forEach((section) => {
-        console.log("Validating section:", section.id);
-        const requiredFields = section.querySelectorAll('[required]');
         requiredFields.forEach((field) => {
+            const errorMessage = field.nextElementSibling;
+            if (errorMessage && errorMessage.classList.contains('error-message')) {
+                errorMessage.remove();
+            }
+            field.classList.remove('error');
+
+            // Handle standard input fields
             if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
                 if (!field.value.trim()) {
                     console.log("Validation failed for field:", field);
-                    allValid = false;
+                    isValid = false;
                     field.classList.add('error');
 
                     const error = document.createElement('span');
@@ -1018,7 +893,7 @@ function validateAllSections() {
                 // Special validation for the email field
                 if (field.name === 'Applicant-email' && field.value.trim() && !validateEmail(field.value.trim())) {
                     console.log("Validation failed for email field:", field);
-                    allValid = false;
+                    isValid = false;
                     field.classList.add('error');
 
                     const error = document.createElement('span');
@@ -1031,13 +906,14 @@ function validateAllSections() {
                 }
             }
 
+            // Handle custom dropdowns (multiselect)
             if (field.classList.contains('select-box')) {
                 const optionsContainer = field.nextElementSibling;
                 const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
 
                 if (checkedOptions.length === 0) {
                     console.log("Validation failed for dropdown:", field);
-                    allValid = false;
+                    isValid = false;
                     field.classList.add('error');
 
                     const error = document.createElement('span');
@@ -1050,111 +926,248 @@ function validateAllSections() {
                 }
             }
         });
-    });
 
-    console.log("Overall validation result:", allValid);
-    return allValid;
-}
-
-// Form submission handler
-document.getElementById('admission-form').addEventListener('submit', function (event) {
-    console.log("Submit event listener attached");
-
-    // Prevent default form submission
-    event.preventDefault();
-
-    // Validate all sections
-    if (!validateAllSections()) {
-        alert("Please fill in all required fields before submitting.");
-        return false;
+        console.log("Validation result for section:", isValid);
+        return isValid;
     }
 
-    // Show the loading modal
-    const loadingModal = document.getElementById('loading-modal');
-    loadingModal.style.display = 'flex';
+    // Function to navigate to the next section
+    function nextSection() {
+        console.log("Next button clicked");
 
-    // Update hidden fields for selected courses
-    const coreCoursesSelected = document.getElementById('core-courses-selected');
-    const electiveCoursesSelected = document.getElementById('elective-courses-selected');
-
-    if (coreCoursesSelected) {
-        coreCoursesSelected.value = Array.from(document.querySelectorAll('input[name="core-courses[]"]:checked'))
-            .map(cb => cb.value)
-            .join(', ');
-    }
-
-    if (electiveCoursesSelected) {
-        electiveCoursesSelected.value = Array.from(document.querySelectorAll('input[name="elective-courses[]"]:checked'))
-            .map(cb => cb.value)
-            .join(', ');
-    }
-
-    // Submit the form after a short delay (to allow the modal to be seen)
-    setTimeout(() => {
-        this.submit(); // Submit the form
-    }, 100); // Adjust the delay as needed
-});
-
-// Multiselect Dropdown Functionality
-document.querySelectorAll('.select-box').forEach(selectBox => {
-    // Handle click events
-    selectBox.addEventListener('click', () => {
-        console.log("Dropdown toggled");
-        const optionsContainer = selectBox.nextElementSibling;
-        optionsContainer.classList.toggle('show');
-    });
-
-    // Handle touch events
-    selectBox.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        console.log("Touch started on dropdown");
-        const optionsContainer = selectBox.nextElementSibling;
-        optionsContainer.classList.toggle('show');
-    }, { passive: false });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!selectBox.contains(e.target) && !optionsContainer.contains(e.target)) {
-            console.log("Dropdown closed (clicked outside)");
-            optionsContainer.classList.remove('show');
+        // Validate the current section before proceeding
+        if (!validateCurrentSection()) {
+            console.log("Validation failed; cannot proceed to next section");
+            return;
         }
-    });
 
-    // Close dropdown on tab/escape key press
-    selectBox.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' || e.key === 'Tab') {
-            console.log("Dropdown closed (Escape/Tab pressed)");
-            optionsContainer.classList.remove('show');
+        // Get the total number of sections
+        const totalSections = document.querySelectorAll('.form-section').length;
+
+        // Move to the next section if not already on the last section
+        if (currentSection < totalSections) {
+            currentSection++; // Increment the current section
+            console.log("Moving to section:", currentSection);
+            navigateTo(currentSection); // Navigate to the new section
+            updateNavigation(); // Update the navigation buttons
         }
-    });
+    }
 
-    // Update the select box text and hidden input when options are selected
-    const optionsContainer = selectBox.nextElementSibling;
-    optionsContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            console.log("Checkbox changed");
-            const selectedOptions = Array.from(optionsContainer.querySelectorAll('input[type="checkbox"]:checked'))
-                .map(checkbox => checkbox.value)
+    // Function to navigate to the previous section
+    function prevSection() {
+        console.log("Back button clicked");
+
+        // Move to the previous section if not already on the first section
+        if (currentSection > 1) {
+            currentSection--; // Decrement the current section
+            console.log("Moving to section:", currentSection);
+            navigateTo(currentSection); // Navigate to the new section
+            updateNavigation(); // Update the navigation buttons
+        }
+    }
+
+    // Function to navigate to a specific section
+    function navigateTo(sectionNumber) {
+        const sections = document.querySelectorAll('.form-section');
+        const navLinks = document.querySelectorAll('.side-nav a');
+
+        // Hide all sections
+        sections.forEach((section) => section.classList.remove('active'));
+
+        // Show the selected section
+        const selectedSection = document.getElementById('section' + sectionNumber);
+        if (selectedSection) {
+            selectedSection.classList.add('active');
+        }
+
+        // Update the navigation links (if applicable)
+        navLinks.forEach((link) => link.classList.remove('active'));
+        if (navLinks[sectionNumber - 1]) {
+            navLinks[sectionNumber - 1].classList.add('active');
+        }
+    }
+
+    // Function to update navigation buttons
+    function updateNavigation() {
+        const prevButton = document.querySelector('.form-navigation .secondary');
+        const nextButton = document.querySelector('.form-navigation .primary');
+        const totalSections = document.querySelectorAll('.form-section').length;
+
+        // Disable "Back" button on the first section
+        prevButton.disabled = currentSection === 1;
+
+        // Change "Next" button to "Submit" on the last section
+        nextButton.textContent = currentSection === totalSections ? 'Submit' : 'Next';
+    }
+
+    // Function to validate all sections
+    function validateAllSections() {
+        const sections = document.querySelectorAll('.form-section');
+        let allValid = true;
+
+        sections.forEach((section) => {
+            console.log("Validating section:", section.id);
+            const requiredFields = section.querySelectorAll('[required]');
+            requiredFields.forEach((field) => {
+                if (field.tagName === 'INPUT' || field.tagName === 'SELECT') {
+                    if (!field.value.trim()) {
+                        console.log("Validation failed for field:", field);
+                        allValid = false;
+                        field.classList.add('error');
+
+                        const error = document.createElement('span');
+                        error.className = 'error-message';
+                        error.textContent = 'This field is required';
+                        field.parentNode.appendChild(error);
+
+                        // Scroll to the invalid field
+                        scrollToInvalidField(field);
+                    }
+
+                    // Special validation for the email field
+                    if (field.name === 'Applicant-email' && field.value.trim() && !validateEmail(field.value.trim())) {
+                        console.log("Validation failed for email field:", field);
+                        allValid = false;
+                        field.classList.add('error');
+
+                        const error = document.createElement('span');
+                        error.className = 'error-message';
+                        error.textContent = 'Please enter a valid email address';
+                        field.parentNode.appendChild(error);
+
+                        // Scroll to the invalid field
+                        scrollToInvalidField(field);
+                    }
+                }
+
+                if (field.classList.contains('select-box')) {
+                    const optionsContainer = field.nextElementSibling;
+                    const checkedOptions = optionsContainer.querySelectorAll('input[type="checkbox"]:checked');
+
+                    if (checkedOptions.length === 0) {
+                        console.log("Validation failed for dropdown:", field);
+                        allValid = false;
+                        field.classList.add('error');
+
+                        const error = document.createElement('span');
+                        error.className = 'error-message';
+                        error.textContent = 'Please select at least one option';
+                        field.parentNode.appendChild(error);
+
+                        // Scroll to the invalid field
+                        scrollToInvalidField(field);
+                    }
+                }
+            });
+        });
+
+        console.log("Overall validation result:", allValid);
+        return allValid;
+    }
+
+    // Form submission handler
+    document.getElementById('admission-form').addEventListener('submit', function (event) {
+        console.log("Submit event listener attached");
+
+        // Prevent default form submission
+        event.preventDefault();
+
+        // Validate all sections
+        if (!validateAllSections()) {
+            alert("Please fill in all required fields before submitting.");
+            return false;
+        }
+
+        // Show the loading modal
+        const loadingModal = document.getElementById('loading-modal');
+        loadingModal.style.display = 'flex';
+
+        // Update hidden fields for selected courses
+        const coreCoursesSelected = document.getElementById('core-courses-selected');
+        const electiveCoursesSelected = document.getElementById('elective-courses-selected');
+
+        if (coreCoursesSelected) {
+            coreCoursesSelected.value = Array.from(document.querySelectorAll('input[name="core-courses[]"]:checked'))
+                .map(cb => cb.value)
                 .join(', ');
+        }
 
-            // Update the select box text
-            selectBox.textContent = selectedOptions || selectBox.getAttribute('data-placeholder');
+        if (electiveCoursesSelected) {
+            const selectedElectives = [];
+            document.querySelectorAll('.elective-category input[type="checkbox"]:checked').forEach(checkbox => {
+                selectedElectives.push(checkbox.value);
+            });
+            electiveCoursesSelected.value = selectedElectives.join(', ');
+        }
 
-            // Update the hidden input field
-            const hiddenInput = selectBox.parentElement.querySelector('input[type="hidden"]');
-            if (hiddenInput) {
-                hiddenInput.value = selectedOptions;
-                console.log("Hidden input updated:", hiddenInput.value);
+        // Submit the form after a short delay (to allow the modal to be seen)
+        setTimeout(() => {
+            this.submit(); // Submit the form
+        }, 100); // Adjust the delay as needed
+    });
+
+    // Multiselect Dropdown Functionality
+    document.querySelectorAll('.select-box').forEach(selectBox => {
+        // Handle click events
+        selectBox.addEventListener('click', () => {
+            console.log("Dropdown toggled");
+            const optionsContainer = selectBox.nextElementSibling;
+            optionsContainer.classList.toggle('show');
+        });
+
+        // Handle touch events
+        selectBox.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            console.log("Touch started on dropdown");
+            const optionsContainer = selectBox.nextElementSibling;
+            optionsContainer.classList.toggle('show');
+        }, { passive: false });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!selectBox.contains(e.target) && !optionsContainer.contains(e.target)) {
+                console.log("Dropdown closed (clicked outside)");
+                optionsContainer.classList.remove('show');
             }
         });
-    });
-});
 
-// Initialize the form
-document.addEventListener('DOMContentLoaded', () => {
-    navigateTo(1);
-    updateNavigation();
-});
+        // Close dropdown on tab/escape key press
+        selectBox.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' || e.key === 'Tab') {
+                console.log("Dropdown closed (Escape/Tab pressed)");
+                optionsContainer.classList.remove('show');
+            }
+        });
+
+        // Update the select box text and hidden input when options are selected
+        const optionsContainer = selectBox.nextElementSibling;
+        optionsContainer.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                console.log("Checkbox changed");
+                const selectedOptions = Array.from(optionsContainer.querySelectorAll('input[type="checkbox"]:checked'))
+                    .map(checkbox => checkbox.value)
+                    .join(', ');
+
+                // Update the select box text
+                selectBox.textContent = selectedOptions || selectBox.getAttribute('data-placeholder');
+
+                // Update the hidden input field
+                const hiddenInput = selectBox.parentElement.querySelector('input[type="hidden"]');
+                if (hiddenInput) {
+                    hiddenInput.value = selectedOptions;
+                    console.log("Hidden input updated:", hiddenInput.value);
+                }
+            });
+        });
+    });
+
+    // Initialize the form
+    document.addEventListener('DOMContentLoaded', () => {
+        navigateTo(1); // Start at section 1
+        updateNavigation(); // Initialize navigation buttons
+    });
+
+
     </script>
 
 
@@ -1292,6 +1305,40 @@ document.addEventListener('DOMContentLoaded', () => {
             z-index: 10;
             position: relative;
         }
+
+
+
+
+                /* Ensure category titles are block-level elements */
+        .elective-category .category-title {
+            display: block; /* Makes the title appear on a new line */
+            font-weight: bold; /* Bold text for titles */
+            margin-top: 15px; /* Adds spacing between categories */
+            margin-bottom: 10px; /* Adds spacing between title and checkboxes */
+        }
+
+        /* Style for checkboxes and labels */
+        .checkbox-group label {
+            display: block; /* Makes each checkbox appear on a new line */
+            margin: 5px 0; /* Adds spacing between checkboxes */
+        }
+
+      
+        /* Optional: Add padding and borders for better visual grouping */
+        .elective-category {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            margin: 0.3rem;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Reset default margin for h4 to avoid extra spacing */
+        .elective-category h4 {
+            margin: 0;
+        }
+        
     </style>
 
 
