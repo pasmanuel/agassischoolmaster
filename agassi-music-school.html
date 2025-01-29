@@ -403,8 +403,8 @@
             </ul>
         </nav>
         <div class="form-content">
-            <!-- action="https://formspree.io/f/myzzbyor" -->
-            <form id="admission-form" method="POST" action="https://formspree.io/f/xyzzvjrv">
+          
+            <form id="admission-form" method="POST" action="https://getform.io/f/broodgwa"  enctype="multipart/form-data">
                 <!-- Section 1: Applicant's Personal Data -->
                 <div id="section1" class="form-section active">
                     <h2>Applicant’s Personal Data</h2>
@@ -465,6 +465,10 @@
                                 name="Applicant-ghana-card-number">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="documents">Upload Your Passport Picture:</label>
+                        <input type="file" id="file" required name="photo[]" multiple>
+                    </div>
                     <div class="form-navigation">
                         <button class="primary" type="button" onclick="nextSection()">Next</button>
                     </div>
@@ -507,89 +511,89 @@
                 </div>
                     
                 <!-- Section 3: AICAP COURSES -->
-<div id="section3" class="form-section">
-    <h2>AICAP COURSES - What do you want to Study?</h2>
-    <div class="form-group">
-        <div class="sub-form-group">
-            <h3>Core Courses (Required)</h3>
-            <ul class="core-courses-list">
-                <li>Music Theory</li>
-                <li>Piano/Keyboard</li>
-                <li>Atentenben</li>
-                <li>African Dance</li>
-            </ul>
-            <!-- Hidden input to store core courses (since they are fixed) -->
-            <input type="hidden" name="core-courses-selected" id="core-courses-selected" value="Music Theory, Piano/Keyboard, Atentenben, African Dance">
-        </div>
-    </div>
-    <br><br>
-    <!-- Elective Courses Grouped -->
-    <div class="form-group">
-        <h3>Select Elective Courses</h3>
+                <div id="section3" class="form-section">
+                    <h2>AICAP COURSES - What do you want to Study?</h2>
+                    <div class="form-group">
+                        <div class="sub-form-group">
+                            <h3>Core Courses (Required)</h3>
+                            <ul class="core-courses-list">
+                                <li>Music Theory</li>
+                                <li>Piano/Keyboard</li>
+                                <li>Atentenben</li>
+                                <li>African Dance</li>
+                            </ul>
+                            <!-- Hidden input to store core courses (since they are fixed) -->
+                            <input type="hidden" name="core-courses-selected" id="core-courses-selected" value="Music Theory, Piano/Keyboard, Atentenben, African Dance">
+                        </div>
+                    </div>
+                    <br><br>
+                    <!-- Elective Courses Grouped -->
+                    <div class="form-group">
+                        <h3>Select Elective Courses</h3>
 
-        <!-- String Instruments -->
-        <div class="elective-category">
-            <h4 class="category-title">String Instruments:</h4>
-            <div class="checkbox-group">
-                <label>
-                    <input type="checkbox" name="string-instruments" value="Guitar">
-                    Guitar
-                </label>
-                <label>
-                    <input type="checkbox" name="string-instruments" value="Violin">
-                    Violin
-                </label>
-                <label>
-                    <input type="checkbox" name="string-instruments" value="Cello">
-                    Cello
-                </label>
-            </div>
-        </div>
+                        <!-- String Instruments -->
+                        <div class="elective-category">
+                            <h4 class="category-title">String Instruments:</h4>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="string-instruments" value="Guitar">
+                                    Guitar
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="string-instruments" value="Violin">
+                                    Violin
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="string-instruments" value="Cello">
+                                    Cello
+                                </label>
+                            </div>
+                        </div>
 
-        <!-- Wind Instruments -->
-        <div class="elective-category">
-            <h4 class="category-title">Wind Instruments:</h4>
-            <div class="checkbox-group">
-                <label>
-                    <input type="checkbox" name="wind-instruments" value="Trumpet">
-                    Trumpet
-                </label>
-                <label>
-                    <input type="checkbox" name="wind-instruments" value="Saxophone">
-                    Saxophone
-                </label>
-                <label>
-                    <input type="checkbox" name="wind-instruments" value="Clarinet">
-                    Clarinet
-                </label>
-                <label>
-                    <input type="checkbox" name="wind-instruments" value="Trombone">
-                    Trombone
-                </label>
-            </div>
-        </div>
+                        <!-- Wind Instruments -->
+                        <div class="elective-category">
+                            <h4 class="category-title">Wind Instruments:</h4>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="wind-instruments" value="Trumpet">
+                                    Trumpet
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="wind-instruments" value="Saxophone">
+                                    Saxophone
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="wind-instruments" value="Clarinet">
+                                    Clarinet
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="wind-instruments" value="Trombone">
+                                    Trombone
+                                </label>
+                            </div>
+                        </div>
 
-        <!-- Keyboard -->
-        <div class="elective-category">
-            <h4 class="category-title">Keyboard:</h4>
-            <div class="checkbox-group">
-                <label>
-                    <input type="checkbox" name="keyboard" value="Piano/Organ">
-                    Piano/Organ
-                </label>
-            </div>
-        </div>
+                        <!-- Keyboard -->
+                        <div class="elective-category">
+                            <h4 class="category-title">Keyboard:</h4>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="keyboard" value="Piano/Organ">
+                                    Piano/Organ
+                                </label>
+                            </div>
+                        </div>
 
-        <!-- Hidden input to store selected elective courses -->
-        <input type="hidden" name="elective-courses-selected" id="elective-courses-selected">
-    </div>
+                        <!-- Hidden input to store selected elective courses -->
+                        <input type="hidden" name="elective-courses-selected" id="elective-courses-selected">
+                    </div>
 
-    <!-- Form Navigation -->
-    <div class="form-navigation">
-        <button class="secondary" type="button" onclick="prevSection()">Back</button>
-        <button class="primary" type="button" onclick="nextSection()">Next</button>
-    </div>
-</div>
+                    <!-- Form Navigation -->
+                    <div class="form-navigation">
+                        <button class="secondary" type="button" onclick="prevSection()">Back</button>
+                        <button class="primary" type="button" onclick="nextSection()">Next</button>
+                    </div>
+                </div>
 
 
 
@@ -1064,6 +1068,18 @@
         console.log("Overall validation result:", allValid);
         return allValid;
     }
+        
+
+
+            const fileInput = document.getElementById("file");
+
+        fileInput.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file && file.size > 5 * 1024 * 1024) { // 5MB limit
+            alert("File size must be less than 5MB!");
+            this.value = ""; // Clear the input
+        }
+        });
 
     // Form submission handler
     document.getElementById('admission-form').addEventListener('submit', function (event) {
@@ -1167,7 +1183,7 @@
         updateNavigation(); // Initialize navigation buttons
     });
 
-
+        
     </script>
 
 
